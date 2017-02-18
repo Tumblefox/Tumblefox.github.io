@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<link rel="stylesheet" href="index.css"/>
+	</head>
+
+	<title>Dashboard</title>
+
+	<body>
+		<div class="sideMenu" id="SM">
+			<a href="javascript:void(0)" onclick="closeMenu()">&times;</a>
+		</div>
+	
+		<div class="navbar">
+			<span style="cursor:pointer"><font size=6em style="margin: 1em;" onclick="openMenu()">&#9776</font></span>
+		</div>
+		<div class="sideMenu">
+		</div>
+		
+		<div class="scrollList">
+		</div>
+		
+		<div class="scrollGallery">
+			<img class="gallery" src="img/topfreelancers/architect.jpg"/>
+			<img class="gallery" src="img/topfreelancers/guitar.gif"/>
+			<img class="gallery" src="img/topfreelancers/printer.gif"/>
+			<img class="gallery" src="img/topfreelancers/puppeteer.gif"/>
+			<img class="gallery" src="img/topfreelancers/animator.gif"/>
+			<img class="gallery" src="img/topfreelancers/cinema.jpg"/>
+			<img class="gallery" src="img/topfreelancers/barista.gif"/>
+			<img class="gallery" src="img/topfreelancers/sitedesigner.gif"/>
+			<img class="gallery" src="img/topfreelancers/graffiti.jpg"/>
+			<img class="gallery" src="img/topfreelancers/builder.gif"/>
+			<img class="gallery" src="img/topfreelancers/coder.gif"/>
+			<img class="gallery" src="img/topfreelancers/rapper.gif"/>
+			<img class="gallery" src="img/topfreelancers/rpg.gif"/>
+			<img class="gallery" src="img/topfreelancers/tailor.gif"/>
+			<img class="gallery" src="img/topfreelancers/trainer.gif"/>
+		</div>
+		
+		<script>
+			function openMenu() {
+				document.getElementById("SM").style.width = "20%";
+			}
+
+			function closeMenu() {
+				document.getElementById("SM").style.width = "0";
+			}
+		</script>
+		
+		
+	</body>
+
+</html>

@@ -1,0 +1,150 @@
+body, html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-size: 100%;
+	background-color: #DDFFD1;
+}
+
+.navbar {
+list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #99FF99;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+#parallax {
+    background-image: url('bg/parallax3.jpg');
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+	padding: 1em;
+	font-size: 1.7em;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: .7em;
+	box-shadow: 0 .5em #455B46;
+	  
+	display: block;
+	margin: auto;
+}
+.button:hover {background-color: #3e8e41}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 .1em #455B50;
+  transform: translateY(.4em);
+}
+
+.rhetoric {
+	float: left;
+	background-color: #66FF99;
+	width: 33%;
+}
+.rhetoric img {
+	display: block;
+	margin: auto;
+	max-width: 95%;
+}
+
+.gallery {
+	width: 15em;
+	height: 15em;
+	transition: .5s ease;
+	margin: 1em;
+	overflow: hidden;
+	box-shadow: 1em 1em 4em black;
+}
+.gallery:hover {
+	opacity: 0.7;
+	width: 17em;
+	height: 17em;
+	margin: 0;
+}
+
+.main {
+	background-color: #B8FFBE;
+	height: 66%;
+}
+
+.secondary {
+	background-color: #C2FF99;
+	width: 66%;
+	height: 34%;
+}
+
+.sideMenu {
+    height: 100%;
+    /*width: 1%;*/
+	width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #99FF99;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+/*.sideMenu:hover {
+	width: 20%;
+}*/
+
+.scrollList {
+	background-color: #B9EDC6;
+	width: 20%;
+	height: 70%;
+	margin: 10% 1%;
+	float: right;
+	overflow-y: auto;
+}
+
+.scrollGallery {
+	background-color: #B9EDC6;
+	height: 15em;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	overflow-x: auto;
+}
+
+.card {
+	background-color: #B9EDC6;
+	width: 80%;
+	height: 50%;
+	position: relative;
+	left: 10%;
+	right: 10%;
+	top: 50%;
+	z-index: 1;
+	box-shadow: 1em 1em 4em gray;
+}
+.cardContent {
+	background-color: blue;
+	height: 100%;
+	width: 66%;
+}
+.cardContent img {
+	width: 100%;
+	height: 100%;
+}
+.cardContact {
+}
+.cardRating {
+}
