@@ -163,7 +163,7 @@ list-style-type: none;
 
 /*Mobile Layout*/
 @media only screen and (max-width: 800px) {
-	body {
-		background-color: black;
+	.rhetoric {
+		font-size: 0.5em;
 	}
 }
