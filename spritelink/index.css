@@ -61,7 +61,7 @@ list-style-type: none;
 	float: left;
 	background-color: #66FF99;
 	width: 33.333%;
-	margin auto;
+	margin: auto;
 }
 
 .rhetoric img {
@@ -163,7 +163,84 @@ list-style-type: none;
 
 /*Mobile Layout*/
 @media only screen and (max-width: 800px) {
-    .rhetoric {
-		font-size: 0.2em;
+
+	.navbar {
+	}
+
+	#parallax {
+	}
+
+
+	.button {
+		padding: 1em;
+		font-size: 1.7em;
+		text-align: center;
+		cursor: pointer;
+		outline: none;
+		color: #fff;
+		background-color: #4CAF50;
+		border: none;
+		border-radius: .7em;
+		box-shadow: 0 .5em #455B46;
+
+		display: block;
+		margin: auto;
+	}
+	.button:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 .1em #455B50;
+	  transform: translateY(.4em);
+	}
+
+	.rhetoric {
+
+	}
+
+	.rhetoric img {
+	}
+
+	.gallery {
+		width: 30%;
+		height: 30%;
+		transition: .5s ease;
+		margin: 1%;
+		overflow: hidden;
+		box-shadow: 1em 1em 4em black;
+	}
+	.gallery:hover {
+		opacity: 0.7;
+		width: 33%;
+		height: 33%;
+		margin: 0;
+	}
+
+	.main {
+
+	}
+
+	.secondary {
+
+	}
+
+	.sideMenu {
+
+	}
+
+	.scrollList {
+	}
+
+	.scrollGallery {
+	}
+
+	.card {
+	}
+	.cardContent {
+
+	}
+	.cardContent img {
+	}
+	.cardContact {
+	}
+	.cardRating {
 	}
 }
