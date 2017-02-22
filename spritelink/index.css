@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-list-style-type: none;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -36,7 +36,8 @@ list-style-type: none;
 }
 
 .button {
-	padding: 1em;
+	/*padding: 1em;*/
+	padding: 3%;
 	font-size: 1.7em;
 	text-align: center;
 	cursor: pointer;
@@ -61,13 +62,19 @@ list-style-type: none;
 	float: left;
 	background-color: #66FF99;
 	width: 33.333%;
-	margin: auto;
-}
+	margin: 0;
 
+	/*width: 30%;
+	margin: 0 1.5%;
+	box-shadow: 1em 1em 4em black;*/
+}
 .rhetoric img {
 	display: block;
 	margin: auto;
 	max-width: 95%;
+}
+.rhetoric p {
+	width: 70%;
 }
 
 .gallery {
@@ -163,6 +170,19 @@ list-style-type: none;
 
 /*Mobile Layout*/
 @media only screen and (max-width: 800px) {
+	.navbar {
+		font-size: 0.5em;
+	}
+	
+	.button {
+		font-size: 0.85em;
+	}
+	
+	#parallax img {
+		height: 25%;
+		width: 25%;
+	}
+	
 	.rhetoric {
 		font-size: 0.5em;
 	}
