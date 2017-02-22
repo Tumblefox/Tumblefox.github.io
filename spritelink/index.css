@@ -92,6 +92,13 @@ body {
 	margin: 0;
 }
 
+.contactUs {
+	height: 100%; 
+	width: 20%; 
+	float: right; 
+	background-color: #66FF99;
+}
+
 .main {
 	background-color: #B8FFBE;
 	height: 66%;
@@ -172,6 +179,7 @@ body {
 @media only screen and (max-width: 800px) {
 	.navbar {
 		font-size: 0.5em;
+		display: none;
 	}
 	
 	.button {
@@ -185,5 +193,12 @@ body {
 	
 	.rhetoric {
 		font-size: 0.5em;
+		width: 100%;
+		display: none;
+	}
+	
+	.contactUs {
+		font-size: 0.5em;
+		display: none;
 	}
 }
