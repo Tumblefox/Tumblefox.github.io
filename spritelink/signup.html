@@ -2,30 +2,32 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="index.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Insert Favicon-->
 	</head>
 	
 	<title>Sign Up</title>
 	
 	<body>
 		<div class="navbar">
-			<a href="index.html" style="font: Gulim; float: left; padding: 1em; color: white;"><font face= Gulim>Home</font></a>
+			<a href="index.html">Home</a>
 		</div>
 		
 		<div class="main">
-			<div style="background-color: #B9EDC6; width: 35%; margin: 2em; display: block; float: left;">
+			<div id="basicForm" class="basicForm">
 				<form>
-					<input type="text" name="name" style="margin: 5% 0; width: 47%; float: left;" placeholder="First Name">
-					<input type="text" name="name" style="margin: 5% 0; width: 47%; float: right;" placeholder="Last Name">
+					<input type="text" name="name" style="margin: 3% 0; width: 47%; float: left;" placeholder="First Name">
+					<input type="text" name="name" style="margin: 3% 0; width: 47%; float: right;" placeholder="Last Name">
 					
-					<input type="text" name="email" style="margin: 5% 0; width: 70%; float: left;" placeholder="Email">
+					<input type="text" name="email" style="margin: 3% 0; width: 70%; float: left;" placeholder="Email">
 
-					<input type="text" name="username" style="margin: 5% 0; width: 70%; float: left;" placeholder="Username">
+					<input type="text" name="username" style="margin: 3% 0; width: 70%; float: left;" placeholder="Username">
 
-					<input type="password" name="password" style="margin: 5% 0; width: 47%; float: left;" placeholder="Password">
-					<input type="password" style="margin: 5% 0; width: 47%; float: right;" placeholder="Confirm Password">
+					<input type="password" name="password" style="margin: 3% 0; width: 47%; float: left;" placeholder="Password">
+					<input type="password" style="margin: 3% 0; width: 47%; float: right;" placeholder="Confirm Password">
 					
-					<input type="text" name="address" style="margin: 5% 0; width: 47%; float: left;" placeholder="Street Address">
-					<select style="margin: 5% 0; width: 47%; float: right;">
+					<input type="text" name="address" style="margin: 3% 0; width: 47%; float: left;" placeholder="Street Address">
+					<select style="margin: 3% 0; width: 47%; float: right;">
 						<option value="40242">40018</option>
 						<option value="40242">40023</option>
 						<option value="40242">40025</option>
@@ -97,45 +99,58 @@
 						<option value="40242">47140</option>
 					</select>
 					
-					<input type="text" name="number" style="margin: 5% 0; width: 70%; float: left;" placeholder="Phone Number">
-					<!--Find A better way to place the checkbox-->
-					<input type="checkbox" name="isFreelancer" value= 1 style="width: 70%; float: left;">
-					<h3 style="float: left;"><font face="Gulim">Are You A Freelancer?</font></h3>
+					<input type="text" name="number" style="margin: 3% 0; width: 70%; float: left;" placeholder="Phone Number">
 				</form>
-			</div>
+				<!--Find A better way to place the checkbox and add a label to it-->
+				<a href="javascript:void(0)" onclick="addToForm()">
+				<input id="check" type="checkbox" name="isFreelancer" value= 1 style="width: 70%; float: left;">
+				</a>
 			
-			<div style="background-color: #B9EDC6; width: 35%; margin: 2em; display: block; float: right;">
+				<div id="freelancerForm" class="freelancerForm">
+					<form>
+						<input type="text" name="business" style="margin: 3% 0; width: 47%; float: left;" placeholder="Business Name">
+						<input type="text" name="category" style="margin: 3% 0; width: 47%; float: right;" placeholder="Category">
+						
+						<input type="text" name="website" style="margin: 3% 0; width: 70%; float: left;" placeholder="Website">
+						
+						<input type="text" name="sm1" style="margin: 3% 0; width: 47%; float: left;" placeholder="Main Social Media">
+					</form>
+				</div>
+			</div>
+		
+			<div class="financialForm">
 				<form>
-					<input type="text" name="business" style="margin: 5% 0; width: 47%; float: left;" placeholder="Business Name">
-					<input type="text" name="category" style="margin: 5% 0; width: 47%; float: right;" placeholder="Category">
+					<input type="text" name="card" style="margin: 3% 0; width: 47%; float: left;" placeholder="Card Number">
+					<input type="text" name="csv" style="margin: 3% 3%; width: 10%; float: none;" placeholder="CSV">
+					<input type="text" name="cardExDate" style="margin: 3% 0; width: 30%; float: right;" placeholder="Expiration Date">
 					
-					<input type="text" name="website" style="margin: 5% 0; width: 70%; float: left;" placeholder="Website">
+					<input type="text" name="btcSend" style="margin: 3% 0; width: 47%; float: left;" placeholder="Bitcoin Send Address">
+					<input type="text" name="btcRecieve" style="margin: 3% 0; width: 47%; float: right;" placeholder="Bitcoin Receive Address">
 					
-					<input type="text" name="sm1" style="margin: 5% 0; width: 47%; float: left;" placeholder="Social Media">
-					<input type="text" name="sm2" style="margin: 5% 0; width: 47%; float: right;" placeholder="Social Media">
+					<input type="text" name="payPal" style="margin: 3% 0; width: 47%; float: left;" placeholder="Paypal Email">
+					<input type="password" name="payPalPass" style="margin: 3% 0; width: 47%; float: right;" placeholder="Password">
 				</form>
+				<a href="dashboard.html" style="text-decoration: none;">
+					<button class="button">
+						Submit <!--Add PHP script to send form to the database-->
+					</button>
+				</a>
 			</div>
 		</div>
 		
-		<div class="secondary">
-			<form>
-				<input type="text" name="card" style="margin: 5% 0; width: 47%; float: left;" placeholder="Card Number">
-				<input type="text" name="csv" style="margin: 5% 5%; width: 10%; float: none;" placeholder="CSV">
-				<input type="text" name="cardExDate" style="margin: 5% 0; width: 30%; float: right;" placeholder="Expiration Date">
-				
-				<input type="text" name="btcSend" style="margin: 5% 0; width: 47%; float: left;" placeholder="Bitcoin Send Address">
-				<input type="text" name="btcRecieve" style="margin: 5% 0; width: 47%; float: right;" placeholder="Bitcoin Recieve Address">
-				
-				<input type="text" name="payPal" style="margin: 5% 0; width: 47%; float: left;" placeholder="Paypal Email">
-				<input type="password" name="payPalPass" style="margin: 5% 0; width: 47%; float: right;" placeholder="Password">
-			</form>
-		</div>
-		
-		<div style="width: 33%;">
+		<!--<div style="width: 33%;">
 			<div style="float: right;">
 				<input type="submit" name="card" style="float: right;">
 			</div>
-		</div>
+		</div>-->
+		
+		<script>
+			function addToForm() {
+					if (document.getElementById("check").value == 1) {
+						document.getElementById("freelancerForm").style.display = "inline";
+					}
+			}
+		</script>
 		
 	</body>
 </html>

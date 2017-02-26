@@ -14,9 +14,23 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: #99FF99;
+	font-family: Gulim;
 	position: fixed;
 	width: 100%;
+	height: 5%;
 	z-index: 2;
+}
+.navbar a {
+	float: left;
+	padding: 1em; 
+	color: white;
+}
+.navbar input {
+	/*float: right; 
+	bottom: 0;*/
+	position: absolute;
+	right: 0.7em;
+	bottom: 0.7em;
 }
 
 #parallax {
@@ -36,7 +50,6 @@ body {
 }
 
 .button {
-	/*padding: 1em;*/
 	padding: 3%;
 	font-size: 1.7em;
 	text-align: center;
@@ -44,6 +57,7 @@ body {
 	outline: none;
 	color: #fff;
 	background-color: #4CAF50;
+	font-family: Gulim;
 	border: none;
 	border-radius: .7em;
 	box-shadow: 0 .5em #455B46;
@@ -52,17 +66,24 @@ body {
 	margin: auto;
 }
 .button:hover {background-color: #3e8e41}
+/*.button a {text-decoration: none;} /*text-decoration: none removes the underline from a hyperlink*/
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 .1em #455B50;
   transform: translateY(.4em);
 }
 
+#salesPitch {
+	/*Replace with something else for the mobile version*/
+}
+
 .rhetoric {
 	float: left;
 	background-color: #66FF99;
+	font-family: Gulim;
+	color: white;
 	width: 33.333%;
-	margin: 0;
+	margin: 0 0 7% 0;
 
 	/*width: 30%;
 	margin: 0 1.5%;
@@ -70,14 +91,24 @@ body {
 }
 .rhetoric img {
 	display: block;
-	margin: auto;
+	margin: 0 2.5%;
 	max-width: 95%;
 }
+.rhetoric h2 {text-align: center;} /*text-align property works with h1-h6*/
 .rhetoric p {
-	width: 70%;
+	width: 95%;
+	color: black;
+	margin: 0 2.5%;
 }
 
 .gallery {
+	width: 70%; 
+	display: block; 
+	margin: 5% 15% 0 15%;
+	font-family: Gulim;
+}
+
+.lancerDemo {
 	width: 30%;
 	height: 30%;
 	transition: .5s ease;
@@ -85,15 +116,22 @@ body {
 	overflow: hidden;
 	box-shadow: 1em 1em 4em black;
 }
-.gallery:hover {
+.lancerDemo:hover {
 	opacity: 0.7;
 	width: 33%;
 	height: 33%;
 	margin: 0;
 }
 
+.bottom {
+	margin: 10% 0 0 0;
+	background-color: #99FF99; 
+	font-family: Gulim; 
+	height: auto;
+}
+
 .contactUs {
-	height: 100%; 
+	max-height: 100%; 
 	width: 20%; 
 	float: right; 
 	background-color: #66FF99;
@@ -101,13 +139,36 @@ body {
 
 .main {
 	background-color: #B8FFBE;
-	height: 66%;
+	height: 100%;
+	width: 100%;
 }
 
-.secondary {
+.basicForm {
+	background-color: #B9EDC6; 
+	width: 50%; 
+	/*height: 60%;*/
+	height: auto;
+	margin: 4% 25% 0 25%; 
+	/*display: block;*/
+	float: left;
+	font-family: Gulim;
+}
+
+.freelancerForm {
+	/*background-color: #B9EDC6;
+	width: 35%; 
+	height: 100%; 
+	margin: 4% 2%;*/ 
+	display: none;
+}
+
+.financialForm {
 	background-color: #C2FF99;
-	width: 66%;
-	height: 34%;
+	/*height: 35%;*/
+	height: auto;
+	width: 50%;
+	float: left;
+	margin: 0 25%; 
 }
 
 .sideMenu {
@@ -138,11 +199,11 @@ body {
 
 .scrollGallery {
 	background-color: #B9EDC6;
-	height: 15em;
+	height: 15%;
 	width: 100%;
 	position: relative;
 	bottom: 0;
-	overflow-x: auto;
+	overflow-x: scroll;
 }
 
 .card {
@@ -183,12 +244,12 @@ body {
 	}
 	
 	.button {
-		font-size: 0.85em;
+		padding: 6%;
 	}
 	
 	#parallax img {
-		height: 25%;
-		width: 25%;
+		height: 50%;
+		width: 50%;
 	}
 	
 	.rhetoric {
@@ -200,5 +261,21 @@ body {
 	.contactUs {
 		font-size: 0.5em;
 		display: none;
+	}
+	
+	.basicForm {
+		width: 70%;
+		margin: 4% 15% 0 15%; 
+	}
+	
+	.financialForm {
+		width: 70%;
+		margin: 0 15% 0 15%; 
+	}
+}
+
+@media only screen and (max-height: 450px) {
+	.main {
+		height: 165%;
 	}
 }
