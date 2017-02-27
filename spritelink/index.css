@@ -221,6 +221,7 @@ body {
 	background-color: blue;
 	height: 100%;
 	width: 66%;
+	float: left;
 }
 .cardContent img {
 	width: 100%;
@@ -231,6 +232,7 @@ body {
 	height: 66%;
 	background-color: red;
 	font-family: Gulim;
+	float: left;
 }
 .cardRating {
 	font-family: Gulim;
