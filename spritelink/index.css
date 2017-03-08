@@ -19,6 +19,7 @@ body {
 	width: 100%;
 	height: 5%;
 	z-index: 2;
+	transition: 0.5s;
 }
 .navbar a {
 	float: left;
@@ -29,8 +30,13 @@ body {
 	/*float: right; 
 	bottom: 0;*/
 	position: absolute;
-	right: 0.7em;
-	bottom: 0.7em;
+	right: 4%;
+	bottom: 24%;
+}
+.navbar go {
+	/* float: right; */
+	position: absolute;
+	right: 0;
 }
 
 #parallax {
@@ -66,7 +72,7 @@ body {
 	margin: auto;
 }
 .button:hover {background-color: #3e8e41}
-/*.button a {text-decoration: none;} /*text-decoration: none removes the underline from a hyperlink*/
+/* .button a {text-decoration: none;} /*text-decoration: none removes the underline from a hyperlink*/ 
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 .1em #455B50;
@@ -102,15 +108,15 @@ body {
 }
 
 .gallery {
-	width: 70%; 
-	display: block; 
+	width: 70%;
+	display: block;
 	margin: 5% 15% 0 15%;
 	font-family: Gulim;
 }
 
 .lancerDemo {
 	width: 30%;
-	height: 30%;
+	/*height: 30%;*/
 	transition: .5s ease;
 	margin: 1%;
 	overflow: hidden;
@@ -119,7 +125,7 @@ body {
 .lancerDemo:hover {
 	opacity: 0.7;
 	width: 33%;
-	height: 33%;
+	/*height: 33%;*/
 	margin: 0;
 }
 
@@ -131,9 +137,9 @@ body {
 }
 
 .contactUs {
-	max-height: 100%; 
+	height: 100%; 
 	width: 20%; 
-	float: right; 
+	float: right;  
 	background-color: #66FF99;
 }
 
@@ -141,6 +147,7 @@ body {
 	background-color: #B8FFBE;
 	height: 100%;
 	width: 100%;
+	overflow: auto; /*fixes that issue of main not covering the whole page*/
 }
 
 .basicForm {
@@ -153,6 +160,7 @@ body {
 	float: left;
 	font-family: Gulim;
 }
+.basicForm p {margin: 60% 0 0 0;}
 
 .freelancerForm {
 	/*background-color: #B9EDC6;
@@ -171,22 +179,36 @@ body {
 	margin: 0 25%; 
 }
 
+.profilePic {
+	background-color: green;
+	width: 4%; 
+	height: 100%;
+}
+
 .sideMenu {
-    height: 100%;
-    /*width: 1%;*/
-	width: 0;
+    /* height: 95%; */
+	/* width: 0; */
+    width: 1%;
+	height: 20%;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
+	top: 40%;
+	left: 0;
+    /*z-index: 1;
+    top: 5%;
+    left: 0;*/
     background-color: #99FF99;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
-/*.sideMenu:hover {
+.sideMenu:hover {
 	width: 20%;
-}*/
+	height: 74%;
+	position: fixed;
+    z-index: 0;
+    top: 5%;
+    left: 0;
+}
 
 .scrollList {
 	background-color: #B9EDC6;
@@ -197,28 +219,48 @@ body {
 	overflow-y: auto;
 }
 
+.scrollItem {
+	background-color: #99FF99;
+	margin: 0 1%;
+	width: 18%;
+	height: 100%;
+	float: left;
+	transition: 0.5s;
+	font-family: Gulim;
+	color: white;
+}
+.scrollItem:hover {
+	opacity: 0.7;
+}
+
 .scrollGallery {
 	background-color: #B9EDC6;
 	height: 15%;
 	width: 100%;
-	position: relative;
+	/*height: 1%;
+	width: 20%;*/
+	z-index: 1;
+	position: absolute;
 	bottom: 0;
-	overflow-x: scroll;
+	transition: 0.5s;
 }
 
 .card {
 	background-color: #B9EDC6;
-	width: 80%;
+	width: 70%;
 	height: 50%;
+	/*position: absolute; With absolute positioning, two cards are place in the exact same place (on top of each other)*/
 	position: relative;
-	left: 10%;
-	right: 10%;
-	top: 50%;
+	right: 5%;
+	left: 25%;
+	top: 15%;
+	margin: 0 0 5% 0;
 	z-index: 1;
+	transition: 0.5s;
 	box-shadow: 1em 1em 4em gray;
 }
 .cardContent {
-	background-color: blue;
+	background-color: #4CFFC3;
 	height: 100%;
 	width: 66%;
 	float: left;
@@ -230,12 +272,30 @@ body {
 .cardContact {
 	width: 34%;
 	height: 66%;
-	background-color: red;
+	background-color: #68C16B;
 	font-family: Gulim;
 	float: left;
 }
 .cardRating {
+	height: 34%;
+	width: 34%;
+	background-color: #A5FFC6;
 	font-family: Gulim;
+	float: left;
+}
+
+#editable h1 {
+	display: none;
+}
+#editable:hover {
+	opacity: 0.5;
+}
+#editable:hover h1{
+	display: block;
+	position: absolute;
+	left: 50%;'
+	bottom: 0;
+	
 }
 
 /*Mobile Layout*/
@@ -276,8 +336,8 @@ body {
 	}
 }
 
-@media only screen and (max-height: 450px) {
+/*@media only screen and (max-height: 450px) {
 	.main {
 		height: 165%;
 	}
-}
+}*/

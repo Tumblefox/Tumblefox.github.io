@@ -12,43 +12,54 @@
 
 	<body>
 		<div class="sideMenu" id="SM">
-			<a href="javascript:void(0)" onclick="closeMenu()">&times;</a>
+			<!-- <a href="javascript:void(0)" onclick="closeMenu()">&times;</a> -->
 		</div>
 	
-		<div class="navbar">
-			<span style="cursor:pointer"><font size=6em style="margin: 1em;" onclick="openMenu()">&#9776</font></span>
-		</div>
-		<div class="sideMenu">
+		<div class="navbar" id="nav">
+			<!-- <span style="cursor:pointer"><font size=6em style="margin: 1em;" onclick="handleMenu()">&#9776</font></span> -->
+			<div class="profilePic">
+				Profile Picture <!--Make this clickable. Include: (1)My Account, (2)Logout. Add PHP to show user's profile pic -->
+			</div>
+			<input type="text" name="search" placeholder="Search">
+			<a href="search.html" style="float: right;;">Go</a>
 		</div>
 		
-		<div class="scrollList">
+		<div class="card" id="editable">
+		<h1 align="center">Edit/Create</h1>
+		<!--Look into JCROP to allow users to crop tehir images before they upload-->
+			<div class="cardContent">
+				<!--PHP script-->
+			</div>
+			
+			<div class="cardContact">
+				<!--PHP script-->
+			</div>
+			
+			<div class="cardRating">
+				<!--PHP script-->
+			</div>
 		</div>
+		
+		<!--<div class="scrollList">
+		</div>-->
 		
 		<div class="scrollGallery">
-			<img class="gallery" src="img/topfreelancers/architect.jpg"/>
-			<img class="gallery" src="img/topfreelancers/guitar.gif"/>
-			<img class="gallery" src="img/topfreelancers/printer.gif"/>
-			<img class="gallery" src="img/topfreelancers/puppeteer.gif"/>
-			<img class="gallery" src="img/topfreelancers/animator.gif"/>
-			<img class="gallery" src="img/topfreelancers/cinema.jpg"/>
-			<img class="gallery" src="img/topfreelancers/barista.gif"/>
-			<img class="gallery" src="img/topfreelancers/sitedesigner.gif"/>
-			<img class="gallery" src="img/topfreelancers/graffiti.jpg"/>
-			<img class="gallery" src="img/topfreelancers/builder.gif"/>
-			<img class="gallery" src="img/topfreelancers/coder.gif"/>
-			<img class="gallery" src="img/topfreelancers/rapper.gif"/>
-			<img class="gallery" src="img/topfreelancers/rpg.gif"/>
-			<img class="gallery" src="img/topfreelancers/tailor.gif"/>
-			<img class="gallery" src="img/topfreelancers/trainer.gif"/>
+			<div class="scrollItem"><h2 align="center">Top 4 Freelancers</h2></div>
+			<!--Add PHP script to find top freelancers from the DB and show their profile pics-->
+			<img class="scrollItem" src="img/topfreelancers/architect.jpg"/>
+			<img class="scrollItem" src="img/topfreelancers/guitar.gif"/>
+			<img class="scrollItem" src="img/topfreelancers/printer.gif"/>
+			<img class="scrollItem" src="img/topfreelancers/puppeteer.gif"/>
 		</div>
 		
 		<script>
-			function openMenu() {
-				document.getElementById("SM").style.width = "20%";
-			}
-
-			function closeMenu() {
-				document.getElementById("SM").style.width = "0";
+			function handleMenu() {
+				if (document.getElementById("SM").style.width == 0) {
+					document.getElementById("SM").style.width = "20%";
+				}
+				else {
+					document.getElementById("SM").style.width = "0";
+				}
 			}
 		</script>
 		
