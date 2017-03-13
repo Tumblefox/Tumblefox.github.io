@@ -247,8 +247,10 @@ body {
 
 .card {
 	background-color: #B9EDC6;
-	width: 70%;
-	height: 50%;
+	/* width: 70%; */
+	/* height: 50%; */
+	width: 70em;
+	height: 32em;
 	/*position: absolute; With absolute positioning, two cards are place in the exact same place (on top of each other)*/
 	position: relative;
 	right: 5%;
