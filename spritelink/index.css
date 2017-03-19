@@ -39,8 +39,21 @@ body {
 	right: 0;
 }
 
+@font-face {
+	font-family: besom;
+	src: url('font/Besom.ttf');
+}
+@font-face {
+	font-family: aqua;
+	src: url('font/aqua.ttf');
+}
+@font-face {
+	font-family: simplifica;
+	src: url('font/SIMPLIFICA Typeface.ttf');
+}
+
 #parallax {
-    background-image: url('bg/parallax3.jpg');
+    background-image: url('bg/parallax4.jpg');
 
     height: 100%;
 	width: auto;
@@ -53,6 +66,35 @@ body {
 #parallax img {
 	height: auto;
 	width: auto;
+}
+#parallax h1 {
+	font-family: 'besom', Gulim;
+	font-size: 5em;
+	margin-top: 0;
+	color: #DDFFD1;
+}
+#parallax p {
+	font-family: 'simplifica', Gulim;
+	font-size: 3em;
+	text-align: center;
+	color: #DDFFD1;
+}
+
+.logo {
+	opacity: 1; 
+	display: block; 
+	margin: auto;
+}
+
+.tagline {
+	position: absolute;
+	right: 0;
+	top: 5%;
+	height: 95%; 
+	width: 20%; 
+	background-color: #99FF99;
+	opacity: 0.5;
+	font-family: 'aqua', Gulim;
 }
 
 .button {
@@ -107,6 +149,32 @@ body {
 	margin: 0 2.5%;
 }
 
+.features {
+	font-family: Gulim;
+	background-color: #327A58;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+.features img {
+	display: block;
+	margin: auto;
+}
+.features p {
+	font-size: 1.3em;
+	margin-bottom: 10%;
+}
+
+.payment {
+	float: left;
+	width: 33.3%;
+}
+.payment img {
+	display: block;
+	max-width: 95%;
+}
+
 .gallery {
 	width: 70%;
 	display: block;
@@ -133,7 +201,7 @@ body {
 	margin: 10% 0 0 0;
 	background-color: #99FF99; 
 	font-family: Gulim; 
-	height: auto;
+	height: 20%;
 }
 
 .contactUs {
@@ -141,6 +209,9 @@ body {
 	width: 20%; 
 	float: right;  
 	background-color: #66FF99;
+}
+.contactUs a {
+	font-family: Gulim;
 }
 
 .main {
@@ -308,13 +379,16 @@ body {
 	}
 	
 	.button {
-		padding: 6%;
+		padding: 3%;
+	font-size: 1em;
 	}
 	
 	#parallax img {
 		height: 50%;
 		width: 50%;
 	}
+	#parallax h1 { font-size: 2em;}
+	#parallax p {font-size: 2em;}
 	
 	.rhetoric {
 		font-size: 0.5em;
