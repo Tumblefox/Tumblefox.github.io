@@ -76,6 +76,7 @@ body {
 #parallax p {
 	font-family: 'simplifica', Gulim;
 	font-size: 3em;
+	font-weight: bold;
 	text-align: center;
 	color: #DDFFD1;
 }
@@ -121,13 +122,17 @@ body {
   transform: translateY(.4em);
 }
 
-#salesPitch {
+.salesPitch {
 	/*Replace with something else for the mobile version*/
+	background-color: #66FF99;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
 }
 
 .rhetoric {
 	float: left;
-	background-color: #66FF99;
+	/*background-color: #66FF99;*/
 	font-family: Gulim;
 	color: white;
 	width: 33.333%;
@@ -169,10 +174,12 @@ body {
 .payment {
 	float: left;
 	width: 33.3%;
+	height: 3%;
+	overflow: hidden;
 }
 .payment img {
 	display: block;
-	max-width: 95%;
+	max-width: 60%;
 }
 
 .gallery {
@@ -254,6 +261,10 @@ body {
 	background-color: green;
 	width: 4%; 
 	height: 100%;
+	transition: 0.5s;
+}
+.profilePic:hover {
+	background-color: blue;
 }
 
 .sideMenu {
@@ -371,6 +382,31 @@ body {
 	
 }
 
+.faq {
+	height: auto;
+	width: 100%;
+	background-color: #327A58;
+}
+.faq p {
+	font-family: 'simplifica', Gulim;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	color: #DDFFD1;
+}
+.faq h1 {
+	font-family: 'besom', Gulim;
+	font-size: 5em;
+	margin-top: 0;
+	color: #DDFFD1;
+}
+.faq h3 {
+	font-family: 'besom', Gulim;
+	font-size: 1.5em;
+	margin-top: 0;
+	color: #DDFFD1;
+}
+
 /*Mobile Layout*/
 @media only screen and (max-width: 800px) {
 	.navbar {
@@ -389,6 +425,10 @@ body {
 	}
 	#parallax h1 { font-size: 2em;}
 	#parallax p {font-size: 2em;}
+	
+	.salesPitch {
+		display: none;
+	}
 	
 	.rhetoric {
 		font-size: 0.5em;
