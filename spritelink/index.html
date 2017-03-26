@@ -28,7 +28,7 @@
 			</div>-->
 			<img src="img/NewLogo.svg" class="logo"/>
 			<h1 align=center>Spritelink</h1>
-			<p>"Get To Know Your Freelancers, Get To Know Your City"</p>
+			<p>Get To Know Your Freelancers, Get To Know Your City</p>
 			<a href="signup.html" style="text-decoration: none;"><button class="button">Get Started</button></a>
 			<!-- <button class="button"><a href="signup.html">Test</a></button> -->
 		</div>
@@ -37,9 +37,10 @@
 			<div class="rhetoric">
 				<img src="img/hire.jpg"/>
 				<h2>Hire Locally</h2>
-				<p>In need of a freelancer? Instead of hring online from across the global look no further than your own city. Spritelink is the connection between an array of freelancers and jobs in the Louisville area! This site showcases the best and brightest that Louisville has to offer. Everything can be conducted online, or, since this is only avaliable to the Louisville area, meet in person for the job.</p><br><br>
+				<p>In need of a freelancer? Instead of hiring online from across the global look no further than your own city. Spritelink is the connection between an array of freelancers and jobs in the Louisville area! This site showcases the best and brightest that Louisville has to offer. Everything can be conducted online, or, since this is only available to the Louisville area, meet in person for the job.</p><br><br>
 			</div>
 			<div class="rhetoric">
+				<!--<img src="img/advertise.jpg"/>-->
 				<h2>Advertise Locally</h2>
 				<p>Louisville is home to about 620,000 people. Instead of posting online for the 7 billion people in the world, fine tune it to your city! The site fine tunes your job arena to those looking in your own city. Advertise locally to help yourself and your city.</p><br><br>
 				<img src="img/advertise.jpg"/>
@@ -60,13 +61,13 @@
 			be paid.</p>
 			
 			<div class="payment">
-				<img src="img/icons/paypal.svg" style="width: 50%;">
+				<img src="img/icons/paypal.svg">
 			</div>
 			<div class="payment">
-				<img src="img/icons/card.svg" style="width: 50%;">
+				<img src="img/icons/card.svg">
 			</div>
 			<div class="payment">
-				<img src="img/icons/bitcoin.svg" style="width: 50%;">
+				<img src="img/icons/bitcoin.svg">
 			</div>
 			<h1 align=center>We Have Diverse Payment Options</h1>
 			<p>Customers can pay with Paypal, a credit card, or their Bitcoin wallet. We will hold the payment and release the funds
@@ -81,27 +82,47 @@
 		
 		<div class="gallery">
 			<h1 align=center style="font-family: 'besom', Gulim;">Top Freelancers</h1>
-			<img class="lancerDemo" src="img/topfreelancers/architect.jpg"/>
-			<img class="lancerDemo" src="img/topfreelancers/guitar.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/printer.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/puppeteer.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/animator.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/cinema.jpg"/>
-			<img class="lancerDemo" src="img/topfreelancers/barista.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/sitedesigner.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/graffiti.jpg"/>
-			<img class="lancerDemo" src="img/topfreelancers/builder.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/coder.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/rapper.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/rpg.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/tailor.gif"/>
-			<img class="lancerDemo" src="img/topfreelancers/trainer.gif"/>
+			<img class="lancerDemo" id="1" src="img/topfreelancers/architect.jpg"/>
+			<img class="lancerDemo" id="2" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/guitar.jpg"/>
+			<img class="lancerDemo" id="3" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/printer.jpg"/>
+			<img class="lancerDemo" id="4" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/puppeteer.jpg"/>
+			<img class="lancerDemo" id="5" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/animator.jpg"/>
+			<img class="lancerDemo" id="6" src="img/topfreelancers/cinema.jpg"/>
+			<img class="lancerDemo" id="7" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/barista.jpg"/>
+			<img class="lancerDemo" id="8" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/sitedesigner.jpg"/>
+			<img class="lancerDemo" id="9" src="img/topfreelancers/graffiti.jpg"/>
+			<img class="lancerDemo" id="10" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/builder.jpg"/>
+			<img class="lancerDemo" id="11" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/coder.jpg"/>
+			<img class="lancerDemo" id="12" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/rapper.jpg"/>
+			<img class="lancerDemo" id="13" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/rpg.jpg"/>
+			<img class="lancerDemo" id="14" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/tailor.jpg"/>
+			<img class="lancerDemo" id="15" onmouseover="change(this.id)" onmouseout="freeze(this.id)" src="img/topfreelancers/trainer.jpg"/>
 		</div>
+		
+		<script>
+			var ext;
+			var next;
+			
+			function change(testt) {
+				ext = document.getElementById(testt).src;
+				next = ext.substr(0, ext.lastIndexOf('.')) + ".gif";
+				document.getElementById(testt).src = next;
+			}
+			
+			function freeze(id) {
+				 document.getElementById(id).src = ext;
+			}
+		</script>
 		
 		<div class="bottom">
 			<div class="contactUs">
-				<a href="">Contact Us</a><br>
-				<a href="FAQ.html">FAQ</a>
+				<div style="width: 70%; margin: auto;">
+					<a href="www.facebook.com"><img src="img/icons/fb.svg" style="width: 30%"/></a>
+					<a href="www.linkedin.com"><img src="img/icons/linkedin.svg" style="width: 30%"/></a>
+					<a href="www.twitter.com"><img src="img/icons/twitter.svg" style="width: 30%"/></a>
+				</div>
+				<a href="contactus.html"><p>Contact Us</p></a>
+				<a href="FAQ.html"><p>FAQ</p></a>
 			</div>
 			<a href="signup.html" style="text-decoration: none;"><button class="button">Get Started</button></a>
 		</div>

@@ -82,12 +82,11 @@ body {
 }
 
 .logo {
-	opacity: 1; 
 	display: block; 
 	margin: auto;
 }
 
-.tagline {
+/*.tagline {
 	position: absolute;
 	right: 0;
 	top: 5%;
@@ -96,7 +95,7 @@ body {
 	background-color: #99FF99;
 	opacity: 0.5;
 	font-family: 'aqua', Gulim;
-}
+}*/
 
 .button {
 	padding: 3%;
@@ -123,7 +122,6 @@ body {
 }
 
 .salesPitch {
-	/*Replace with something else for the mobile version*/
 	background-color: #66FF99;
 	width: 100%;
 	height: auto;
@@ -136,7 +134,7 @@ body {
 	font-family: Gulim;
 	color: white;
 	width: 33.333%;
-	margin: 0 0 7% 0;
+	margin: 0 0 3% 0;
 
 	/*width: 30%;
 	margin: 0 1.5%;
@@ -144,7 +142,7 @@ body {
 }
 .rhetoric img {
 	display: block;
-	margin: 0 2.5%;
+	margin: 5% 2.5%;
 	max-width: 95%;
 }
 .rhetoric h2 {text-align: center;} /*text-align property works with h1-h6*/
@@ -219,6 +217,7 @@ body {
 }
 .contactUs a {
 	font-family: Gulim;
+	text-align: center;
 }
 
 .main {
@@ -263,8 +262,26 @@ body {
 	height: 100%;
 	transition: 0.5s;
 }
+.profilePic img {
+	margin: auto;
+}
 .profilePic:hover {
-	background-color: blue;
+	background-color: #99FF99;
+}
+
+#acc {
+	background-color: #99FF99; 
+	position: fixed;
+	top: 5%;
+	display: none; 
+	width: 10%; 
+	height: 15%; 
+	transition: 0.5s;
+}
+#acc a {
+	text-decoration: none;
+	font-family: Gulim;
+	text-align: left;
 }
 
 .sideMenu {
@@ -329,17 +346,16 @@ body {
 
 .card {
 	background-color: #B9EDC6;
-	/* width: 70%; */
-	/* height: 50%; */
-	width: 70em;
-	height: 32em;
+	 width: 70%; /*This is the relative dimensions that stay the same size, but display in different ratio*/
+	 height: 50%; 
+	/*width: 70em;
+	height: 32em; These are the fixed dimensions that stays the same ratio on all displays, but also the same size*/
 	/*position: absolute; With absolute positioning, two cards are place in the exact same place (on top of each other)*/
 	position: relative;
 	right: 5%;
 	left: 25%;
 	top: 15%;
 	margin: 0 0 5% 0;
-	z-index: 1;
 	transition: 0.5s;
 	box-shadow: 1em 1em 4em gray;
 }
@@ -382,7 +398,7 @@ body {
 	
 }
 
-.faq {
+.faq {/*This class is also used for contactus.html*/
 	height: auto;
 	width: 100%;
 	background-color: #327A58;
@@ -402,6 +418,12 @@ body {
 }
 .faq h3 {
 	font-family: 'besom', Gulim;
+	font-size: 1.5em;
+	margin-top: 0;
+	color: #DDFFD1;
+}
+.faq h4 {
+	font-family: 'simplifica', Gulim;
 	font-size: 1.5em;
 	margin-top: 0;
 	color: #DDFFD1;
@@ -427,17 +449,17 @@ body {
 	#parallax p {font-size: 2em;}
 	
 	.salesPitch {
-		display: none;
+		/*display: none;*/
 	}
 	
 	.rhetoric {
-		font-size: 0.5em;
+		/*font-size: 0.5em;*/
 		width: 100%;
-		display: none;
+		/*display: none;*/
 	}
 	
 	.contactUs {
-		font-size: 0.5em;
+		/*font-size: 0.5em;*/
 		display: none;
 	}
 	
