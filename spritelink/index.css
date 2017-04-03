@@ -240,11 +240,11 @@ body {
 .basicForm p {margin: 60% 0 0 0;}
 
 .freelancerForm {
-	/*background-color: #B9EDC6;
+	background-color: #B9EDC6;
 	width: 35%; 
 	height: 100%; 
-	margin: 4% 2%;*/ 
-	display: none;
+	margin: 4% 2%;
+	display: inline;
 }
 
 .financialForm {
@@ -296,9 +296,15 @@ body {
     top: 5%;
     left: 0;*/
     background-color: #99FF99;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
     padding-top: 60px;
+}
+.sideMenu  p{
+	font-family: Gulim;
+	text-align: center;
+	display: none;
+	
 }
 .sideMenu:hover {
 	width: 20%;
@@ -307,6 +313,9 @@ body {
     z-index: 0;
     top: 5%;
     left: 0;
+}
+.sideMenu:hover p {
+	display: block;
 }
 
 .scrollList {
