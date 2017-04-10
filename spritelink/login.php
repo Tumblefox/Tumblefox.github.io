@@ -37,6 +37,6 @@
 		echo "Failed to Login.";
 	}*/
 	
-	
+	header("location: login.html");
 	$connection->close();
 ?>

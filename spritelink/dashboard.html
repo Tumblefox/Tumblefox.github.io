@@ -22,7 +22,7 @@
 				<p>Percentage of Total Jobs: </p><br>
 				<p>Number of Times Your Card Was Picked Up: </p>
 				<p>Percentage of Times Your Card Led to a Job: </p>
-				<p>Percentage of Total Jobs: </p><br>
+				<p>Percentage Customers Who Would Hire You Again: </p><br>
 				
 				
 			</div>
@@ -38,6 +38,9 @@
 		</div>
 		
 		<div id="acc" onclick="closeAccTab()">
+			<?php include 'loggedin.php'; 
+			echo "Hey, " + $_SESSION['login_user'];
+			?>
 			<a href="account.html"><p>Account</p></a>
 			<a href="index.html"><p>Logout</p></a>
 		</div>
@@ -45,17 +48,19 @@
 		<div class="card" id="editable">
 		<h1 align="center">Edit/Create</h1>
 		<!--Look into JCROP to allow users to crop their images before they upload-->
-			<div class="cardContent">
-				<!--PHP script-->
-			</div>
-			
-			<div class="cardContact">
-				<!--PHP script-->
-			</div>
-			
-			<div class="cardRating">
-				<!--PHP script-->
-			</div>
+			<!--<form action="fetcher.php">-->
+				<div class="cardContent">
+					<!--PHP script-->
+				</div>
+				
+				<div class="cardContact">
+					<!--PHP script-->
+				</div>
+				
+				<div class="cardRating">
+					<!--PHP script-->
+				</div>
+			<!--</form>-->
 		</div>
 		
 		<!--<div class="scrollList">

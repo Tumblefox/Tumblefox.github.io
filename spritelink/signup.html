@@ -13,130 +13,141 @@
 			<a href="index.html">Home</a>
 		</div>
 		
-		<div class="main">
-			<div id="basicForm" class="basicForm">
+		<!--<form action="signup.php" method="post">-->
+			<div class="main">
+				<div id="basicForm" class="basicForm">
 				<form action="signup.php" method="post">
-					<input type="text" name="fname" style="margin: 3% 0; width: 47%; float: left;" placeholder="First Name"/>
-					<input type="text" name="lname" style="margin: 3% 0; width: 47%; float: right;" placeholder="Last Name"/>
-					
-					<input type="text" name="email" style="margin: 3% 0; width: 70%; float: left;" placeholder="Email"/>
+						<input type="text" name="fname" style="margin: 3% 0; width: 47%; float: left;" placeholder="First Name" required/>
+						<input type="text" name="lname" style="margin: 3% 0; width: 47%; float: right;" placeholder="Last Name" required/>
+						
+						<input type="text" name="email" style="margin: 3% 0; width: 70%; float: left;" placeholder="Email" required/>
 
-					<input type="text" name="username" style="margin: 3% 0; width: 70%; float: left;" placeholder="Username"/>
+						<input type="text" name="username" style="margin: 3% 0; width: 70%; float: left;" placeholder="Username" required/>
 
-					<input type="password" name="password" style="margin: 3% 0; width: 47%; float: left;" placeholder="Password"/>
-					<input type="password" style="margin: 3% 0; width: 47%; float: right;" placeholder="Confirm Password"/>
+						<input type="password" name="password" style="margin: 3% 0; width: 47%; float: left;" placeholder="Password" required/>
+						<input type="password" style="margin: 3% 0; width: 47%; float: right;" placeholder="Confirm Password" required/>
+						
+						<input type="text" name="address" style="margin: 3% 0; width: 47%; float: left;" placeholder="Street Address"/>
+						<select name="zip" style="margin: 3% 0; width: 47%; float: right;">
+							<option value="40018">40018</option>
+							<option value="40023">40023</option>
+							<option value="40025">40025</option>
+							<option value="40027">40027</option>
+							<option value="40041">40041</option>
+							<option value="40056">40056</option>
+							<option value="40059">40059</option>
+							<option value="40118">40118</option>
+							<option value="40177">40177</option>
+							<option value="40201">40201</option>
+							<option value="40203">40203</option>
+							<option value="40204">40204</option>
+							<option value="40205">40205</option>
+							<option value="40205">40206</option>
+							<option value="40207">40207</option>
+							<option value="40208">40208</option>
+							<option value="40209">40209</option>
+							<option value="40210">40210</option>
+							<option value="40211">40211</option>
+							<option value="40212">40212</option>
+							<option value="40213">40213</option>
+							<option value="40214">40214</option>
+							<option value="40215">40215</option>
+							<option value="40216">40216</option>
+							<option value="40217">40217</option>
+							<option value="40218">40218</option>
+							<option value="40219">40219</option>
+							<option value="40220">40220</option>
+							<option value="40221">40221</option>
+							<option value="40222">40222</option>
+							<option value="40223">40223</option>
+							<option value="40225">40225</option>
+							<option value="40228">40228</option>
+							<option value="40229">40229</option>
+							<option value="40231">40231</option>
+							<option value="40232">40232</option>
+							<option value="40233">40233</option>
+							<option value="40241">40241</option>
+							<option value="40242">40242</option>
+							<option value="40243">40243</option>
+							<option value="40245">40245</option>
+							<option value="40250">40250</option>
+							<option value="40251">40251</option>
+							<option value="40255">40255</option>
+							<option value="40258">40258</option>
+							<option value="40259">40259</option>
+							<option value="40261">40261</option>
+							<option value="40266">40266</option>
+							<option value="40268">40268</option>
+							<option value="40270">40270</option>
+							<option value="40272">40272</option>
+							<option value="40280">40280</option>
+							<option value="40281">40281</option>
+							<option value="40282">40282</option>
+							<option value="40283">40283</option>
+							<option value="40285">40285</option>
+							<option value="40287">40287</option>
+							<option value="40289">40289</option>
+							<option value="40290">40290</option>
+							<option value="40291">40291</option>
+							<option value="40292">40292</option>
+							<option value="40293">40293</option>
+							<option value="40294">40294</option>
+							<option value="40295">40295</option>
+							<option value="40296">40296</option>
+							<option value="40297">40297</option>
+							<option value="40298">40298</option>
+							<option value="40299">40299</option>
+							<option value="47140">47140</option>
+						</select>
+						
+						<input type="text" name="number" style="margin: 3% 0; width: 70%; float: left;" placeholder="Phone Number"/>
 					
-					<input type="text" name="address" style="margin: 3% 0; width: 47%; float: left;" placeholder="Street Address"/>
-					<select name="zip" style="margin: 3% 0; width: 47%; float: right;">
-						<option value="40242">40018</option>
-						<option value="40242">40023</option>
-						<option value="40242">40025</option>
-						<option value="40242">40027</option>
-						<option value="40242">40041</option>
-						<option value="40242">40056</option>
-						<option value="40242">40059</option>
-						<option value="40242">40118</option>
-						<option value="40242">40177</option>
-						<option value="40242">40201</option>
-						<option value="40242">40203</option>
-						<option value="40242">40204</option>
-						<option value="40242">40205</option>
-						<option value="40242">40206</option>
-						<option value="40242">40207</option>
-						<option value="40242">40208</option>
-						<option value="40242">40209</option>
-						<option value="40242">40210</option>
-						<option value="40242">40211</option>
-						<option value="40242">40212</option>
-						<option value="40242">40213</option>
-						<option value="40242">40214</option>
-						<option value="40242">40215</option>
-						<option value="40242">40216</option>
-						<option value="40242">40217</option>
-						<option value="40242">40218</option>
-						<option value="40242">40219</option>
-						<option value="40242">40220</option>
-						<option value="40242">40221</option>
-						<option value="40242">40222</option>
-						<option value="40242">40223</option>
-						<option value="40242">40225</option>
-						<option value="40242">40228</option>
-						<option value="40242">40229</option>
-						<option value="40242">40231</option>
-						<option value="40242">40232</option>
-						<option value="40242">40233</option>
-						<option value="40242">40241</option>
-						<option value="40242">40242</option>
-						<option value="40242">40243</option>
-						<option value="40242">40245</option>
-						<option value="40242">40250</option>
-						<option value="40242">40251</option>
-						<option value="40242">40255</option>
-						<option value="40242">40258</option>
-						<option value="40242">40259</option>
-						<option value="40242">40261</option>
-						<option value="40242">40266</option>
-						<option value="40242">40268</option>
-						<option value="40242">40270</option>
-						<option value="40242">40272</option>
-						<option value="40242">40280</option>
-						<option value="40242">40281</option>
-						<option value="40242">40282</option>
-						<option value="40242">40283</option>
-						<option value="40242">40285</option>
-						<option value="40242">40287</option>
-						<option value="40242">40289</option>
-						<option value="40242">40290</option>
-						<option value="40242">40291</option>
-						<option value="40242">40292</option>
-						<option value="40242">40293</option>
-						<option value="40242">40294</option>
-						<option value="40242">40295</option>
-						<option value="40242">40296</option>
-						<option value="40242">40297</option>
-						<option value="40242">40298</option>
-						<option value="40242">40299</option>
-						<option value="40242">47140</option>
-					</select>
-					
-					<input type="text" name="number" style="margin: 3% 0; width: 70%; float: left;" placeholder="Phone Number"/>
+					<!--Find A better way to place the checkbox and add a label to it
+					<a href="javascript:void(0)" onclick="addToForm()">
+					<input id="check" type="checkbox" name="isFreelancer" value=1 style=" float: left;">
+					</a>
+					<p>Are You A Freelancer? Click Here</p><!--Find A better way to place text-->
+					<!--<input id="check" type="checkbox" name="freelance" value="1" style=" float: left; width: 100%"/>
+					<center><p style=" float: left; width: 100%; margin: 0;">Click Here If You Are A Freelancer</p></center>-->
+					<select name="freelance" style="margin:0; width: 100%; float: left;">
+							<option value="no">I'm just a customer.</option>
+							<option value="yes">I'm also a freelancer.</option>
 				
-				<!--Find A better way to place the checkbox and add a label to it
-				<a href="javascript:void(0)" onclick="addToForm()">
-				<input id="check" type="checkbox" name="isFreelancer" value=1 style=" float: left;">
-				</a>
-				<p>Are You A Freelancer? Click Here</p><!--Find A better way to place text-->
+							<input type="text" name="business" style="margin: 3% 0; width: 47%; float: left;" placeholder="Business Name">
+							<select name="category" style="margin: 3% 0; width: 47%; float: right;">
+							<option value="business">Business</option>
+							<option value="computer">Computer/Technology/Software</option>
+							<option value="education">Education</option>
+							<option value="engineering">Engineering/Production</option>
+							<option value="health">Health</option>
+							<option value="food">Food</option>
+							<option value="law">Law/Law Enforcement</option>
+							<option value="media">Media/Entertainment</option>
+							<option value="art">Graphic Design/Art/Fashion</option>
+							</select>
+							
+							<input type="text" name="website" style="margin: 3% 0; width: 70%; float: left;" placeholder="Website">
+							
+							<input type="text" name="sm" style="margin: 3% 0; width: 47%; float: left;" placeholder="Main Social Media">
+				</div>
 			
-				<div id="freelancerForm" class="freelancerForm">
-					
-						<input type="text" name="business" style="margin: 3% 0; width: 47%; float: left;" placeholder="Business Name">
-						<input type="text" name="category" style="margin: 3% 0; width: 47%; float: right;" placeholder="Category">
+				<div class="financialForm">
+						<input type="text" name="card" style="margin: 3% 0; width: 47%; float: left;" placeholder="Card Number">
+						<input type="text" name="csv" style="margin: 3% 3%; width: 10%; float: none;" placeholder="CSV">
+						<input type="text" name="cardExDate" style="margin: 3% 0; width: 30%; float: right;" placeholder="Expiration Date">
 						
-						<input type="text" name="website" style="margin: 3% 0; width: 70%; float: left;" placeholder="Website">
+						<input type="text" name="btcSend" style="margin: 3% 0; width: 47%; float: left;" placeholder="Bitcoin Send Address">
+						<input type="text" name="btcRecieve" style="margin: 3% 0; width: 47%; float: right;" placeholder="Bitcoin Receive Address">
 						
-						<input type="text" name="sm" style="margin: 3% 0; width: 47%; float: left;" placeholder="Main Social Media">
-					
+						<input type="text" name="paypal" style="margin: 3% 0; width: 47%; float: left;" placeholder="Paypal Email">
+						<input type="password" name="paypalPass" style="margin: 3% 0; width: 47%; float: right;" placeholder="Password">
+						<button type="submit" class="button">
+							Submit <!--Add PHP script to send form to the database-->
+						</button>
+					</form>
 				</div>
 			</div>
-		
-			<div class="financialForm">
-					<input type="text" name="card" style="margin: 3% 0; width: 47%; float: left;" placeholder="Card Number">
-					<input type="text" name="csv" style="margin: 3% 3%; width: 10%; float: none;" placeholder="CSV">
-					<input type="text" name="cardExDate" style="margin: 3% 0; width: 30%; float: right;" placeholder="Expiration Date">
-					
-					<input type="text" name="btcSend" style="margin: 3% 0; width: 47%; float: left;" placeholder="Bitcoin Send Address">
-					<input type="text" name="btcRecieve" style="margin: 3% 0; width: 47%; float: right;" placeholder="Bitcoin Receive Address">
-					
-					<input type="text" name="paypal" style="margin: 3% 0; width: 47%; float: left;" placeholder="Paypal Email">
-					<input type="password" name="paypalPass" style="margin: 3% 0; width: 47%; float: right;" placeholder="Password">
-					<a href="dashboard.html" style="text-decoration: none;">
-					<button type="submit" class="button">
-						Submit <!--Add PHP script to send form to the database-->
-					</button>
-					</a>
-				</form>
-			</div>
-		</div>
+		<!--</form>-->
 		
 		<!--<div style="width: 33%;">
 			<div style="float: right;">
