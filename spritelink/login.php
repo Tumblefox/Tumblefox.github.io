@@ -9,10 +9,10 @@
 	}
 	$name = $_POST["name"];
 	$name = stripslashes($name); // Anti-SQL Injection Measure
-	$name = mysql_real_escape_string($name); // Anti-SQL Injection Measure
+	$name = mysqli_real_escape_string($connection, $name); // Anti-SQL Injection Measure
 	$pass = $_POST["pass"];
 	$pass = stripslashes($pass);
-	$pass = mysql_real_escape_string($pass);
+	$pass = mysqli_real_escape_string($connection, $pass);
 	
 	$query = "SELECT * FROM customer WHERE username='$name' and password='$pass'";
 	$result = mysqli_query($connection, $query);//MAKE SURE TO USE MSQLi from now on
@@ -21,22 +21,13 @@
 	
 	if($count==1) {
 		echo "Login Success!";
+		$row = mysqli_fetch_assoc($result);
+		session_start();
+		$_SESSION["id"] = $row["customer_id"];
+		header("location: dashboard.php");
 	}
 	else {
-		echo "Login Failed YOU FOOL!!!!";
+		header("location: login.html");
+		echo "Login Failed";
 	}
-
-	/*if($query = $connection->prepare("SELECT username, password FROM customer WHERE username = ? AND password = ?;")) {
-		$query->bind_param("ss", $name, $pass);
-		
-		$query->execute();
-		echo "Login Success!";
-		$query->close();
-	}
-	else {
-		echo "Failed to Login.";
-	}*/
-	
-	header("location: login.html");
-	$connection->close();
 ?>

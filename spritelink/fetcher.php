@@ -1,5 +1,5 @@
 <?php
-	user = 'root';
+	$user = 'root';
 	$pass = '';
 	$dbName = 'spritelink';
 	
@@ -8,9 +8,19 @@
     die("Error: Unable To Connect" . $connection->connect_error);
 	} 
 	
-	include 'loggedin.php';
+	session_start();
+	$id = $_SESSION["id"];
+	
+	function getName() {
+	
+		$result = mysqli_query($connection, "SELECT username from customer WHERE customer_id = $id");
+		$row = mysqli_fetch_assoc($result);
+		$msg = $row["username"];
+		echo "$msg";
+	}
 	
 	function getCardImage() {
+		$query = "SELECT * FROM freelancer WHERE username='$name' and password='$pass'";
 	}
 	
 	function getCardContact() {

@@ -33,16 +33,43 @@
 		$card2 = "null";
 		$card3 = "null";
 		
-		if ($freelance == "yes") {
-			if ($freeQuery = $connection->prepare("INSERT INTO freelancer (businessname, category, website, socialMedia)
-			VALUES (?, ?, ?, ?)")) {
-				$freeQuery->bind_param("ssss", $business, $category, $website, $sm);
-				$business =
-			}
-		}
-		
 		$query->execute();
 		$query->close();
+		
+		$login = "SELECT * FROM customer WHERE username='$name' and password='$pass'";
+		$result = mysqli_query($connection, $query);
+		$count = mysqli_num_rows($result);
+	
+		if($count==1) {
+			echo "Login Success!";
+			$row = mysqli_fetch_assoc($result);
+			session_start();
+			$_SESSION["id"] = $row["customer_id"];
+	}
+		
+		if ($freelance == "yes") {
+			if ($freeQuery = $connection->prepare("INSERT INTO freelancer (customer_id, businessname, category, website, socialMedia)
+			VALUES (?, ?, ?, ?, ?)")) {
+				$freeQuery->bind_param("issss", $cid, $business, $category, $website, $sm);
+				$cid = mysqli_insert_id($connection);
+				$business = $_POST["business"];
+				$category = $_POST["category"];
+				$website = $_POST["website"];
+				$sm = $_POST["sm"];
+				
+				if ($freeQuery->execute()) {
+					echo "YOU GOT THE SUCC";
+				} else {
+					echo "freeQuery Execution Failed! ";
+					echo mysqli_error($connection);
+				}
+				
+				$freeQuery->close();
+			}
+		} else {
+			echo "Freelance Failed";
+			echo mysqli_error($connection);
+		}
 	}
 	
 	else {
