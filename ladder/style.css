@@ -1,0 +1,29 @@
+.bg1, .bg2, .bg3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height: 100%;
+}
+
+#nav {
+	position: fixed;
+}
+
+/* First image (Logo. Full height) */
+.bg1 {
+    background-image: url('img/site.jpg');
+	height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bg2 {
+    background-image: url("img/plan.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bg3 {
+    background-image: url("img/city.jpg");
+    min-height: 400px;
+}
