@@ -85,7 +85,7 @@ function loadTypeInput() {
 	 
 		 for (i = 0; i < count; i++) {
 			if (citeForm.childNodes[i] != format) {
-				citeForm.removeChild(citeForm.childNodes(i));
+				citeForm.value = "";
 			}
 		 }
 	 }
