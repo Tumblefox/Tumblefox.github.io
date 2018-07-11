@@ -34,21 +34,21 @@ function loadTypeInput() {
  * @author A'Jee Sieka
  */
  function stringFormat(fString, entry) {
-	 //argument[0] is the format string (ex. "My name is [*]")
-	 //[*] is used in palce of sequential numbering [0], [1], [2]...
-	 //string = arguments[0].split("[*]");
-	 string = fString.split("[*]");
-	 
-	 output = "";
+  //argument[0] is the format string (ex. "My name is [*]")
+  //[*] is used in palce of sequential numbering [0], [1], [2]...
+  //string = arguments[0].split("[*]");
+  var string = fString.split("[*]");
 
-	 for (i = 0; i < entry.length; i++) {
-		 if (entry[i] != "") {
-			 output += string[i] + entry[i];
-		 }
-	 }
-	 
-	 return output;
- }
+  var output = "";
+
+  for (i = 0; i < string.length; i++) {
+    output += string[i];
+    if (entry[i] !== undefined) {
+      output += entry[i];
+    }
+  }
+  return output;
+}
 /**
  * Given the user's selected citation format, load the input to select citation type
  * @param {string} name Formats the given name to meet citation standards (ex. Walter William White -> W. W. White)
