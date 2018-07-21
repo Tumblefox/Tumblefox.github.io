@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+	<title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <script src="scripts/bushido.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bushido.css">
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.ico">-->
+  </head>
+  
+  <body>
+	<!--<video autoplay muted loop class="heroImg">
+		<source src="img/Clouds-lg.mp4" type="video/mp4">
+	</video>-->
+	<div>
+		<div class="heroImg" style="background-image: url('img/desert.jpg');">
+			<div class="whitespace-md"></div>
+			<div class="container-main transparent-black img-rounded whitespace-sm">
+				<img src="img/pizza.png" style="width: 50%; margin-left: 25%;"/>
+				<h1 class="text-center whitespace-sm" id="anim">Killer Pizza</h1>
+				<h3 class="text-center whitespace-sm">A Louisville based video game studio.</h3>
+			</div>
+			<div class="whitespace-md"></div>
+		</div>
+	</div>
+	<div class="whitespace-md"></div>
+	
+	<main class="container-main" id="main">
+		<h3 class="text-center whitespace-sm">Our Work.</h3>
+		<!--<img src="img/universe.jpg"/>
+		<p class="text-center whitespace-sm">Coming Soon.</p>-->
+		<script>
+			var main = document.getElementById("main");
+			main.appendChild(
+				carousel(
+					["img/desert2.jpg", "img/universe.jpg", "img/gobi.jpg"]
+				)
+			);
+		</script>
+		<p class="text-center whitespace-sm">Coming Soon.</p>
+		<div class="whitespace-md"></div>
+		
+		
+		<script>
+			var founders = [
+				"https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-1/p160x160/26804618_1765796196806529_7150205874598942534_n.jpg?_nc_cat=0&oh=991e739720681ab70b3963985ad0c7a6&oe=5BC9283F",
+				"https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-1/c118.328.304.304/s160x160/34687496_1906613716038094_5632675602398969856_n.jpg?_nc_cat=0&oh=2625820b523aa1ecb0362086150355ed&oe=5BCD173A"
+			];
+			
+			//var main = document.getElementById("main");
+			var element = brochure(
+				["What's New?"], 
+				["We are always in the process of developing something new. Make sure to check our social media pages to see what's up.<br>" +
+					"<div class='row whitespace-md'><div class='col-sm-4 whitespace-md'><a href='https://www.facebook.com'><img class='center-block' src='img/fb.png'/></a></div><div class='col-sm-4 whitespace-md'><a href='https://www.youtube.com'><img class='center-block' src='img/yt.png'/></a></div><div class='col-sm-4 whitespace-md'><a href='https://www.instagram.com'><img class='center-block' src='img/insta.png'/></a></div></div>"
+				], 
+				["img/vector.jpg", "img/geek.jpg", "img/biz.jpg"], 
+				["Philosophy", "Story", "Goals"], 
+				[
+					"Killer Pizza is a lab, and an art studio. We explore, experiment, and build. Manageable, modular deployment is our main building block. It provides the order we need to freely tinker with new concepts, perspectives, and techniques in art and technology.",
+					"We're just bros who wanted to build a game studio. We've always loved games, and at some point realized that with our backgrounds in geek culture, art, and technology, game development is a calling.",
+					"We wish to forge a path to successful game production that others can follow. Our games will explore uncharted territory and unspoken narratives. With all that the industry has given us, we wish to contribute in ways never before seen."
+				]
+			);
+			main.appendChild(element);
+		</script>
+		<div class="whitespace-md"></div>
+		<h3 class="text-center whitespace-sm">The Dynamic Duo.</h3>
+		<script>
+			main.appendChild(
+			grid(2, [
+				roundCard(founders[0], "Nakori Ellis | Artist, Game Designer", "50%"),
+				roundCard(founders[1], "A'Jee Sieka | Programmer, Game Designer", "50%")
+			], "", [])
+			);
+			/*var elements = [
+				text("Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum", "p", ""),
+				text("Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum", "p", "")
+			];
+			main.appendChild(grid(2, elements, "", []));*/
+		</script>
+	</main>
+	
+	<div class="whitespace-md"></div>
+	<footer id="footer">
+		<script>
+			init.footer();
+		</script>
+	</footer>
+  </body>
+</html>

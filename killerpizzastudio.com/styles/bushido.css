@@ -1,0 +1,137 @@
+/*------------------------------------Colors----------------------------------*/
+.light-gray {
+  background-color: #F7F7F7;
+  color: #606060;
+}
+.light-gray a {
+  color: navy;
+}
+
+.dark-gray {
+  background-color: #606060;
+  color: #ffffff;
+}
+.dark-gray a {
+  color: #66a3ff;
+}
+
+.black {
+	background-color: black;
+	color: #F7F7F7;
+}
+
+.dark-red {
+  background-color: #A02539;
+  color: #F7F7F7;
+}
+
+.red {
+  background-color: #DB203D;
+  color: #F7F7F7;
+}
+
+.text-dark-gray {
+  color: #606060;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+/*---------------------------------Whitespace---------------------------------*/
+.whitespace-sm {
+  padding: 2%;
+}
+.whitespace-md {
+  padding: 5%;
+}
+.whitespace-lg {
+  padding: 10%;
+}
+
+/*---------------------------------Shapes-------------------------------------*/
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
+/*---------------------------------Features-----------------------------------*/
+.stackable {
+  margin-bottom: 5%;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7%;
+}
+
+.nav-sleek {
+  border-style: solid;
+  border-radius: 25px;
+  border-color: white;
+  color: white;
+}
+
+.button-sleek {
+  padding: 1%;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.heroImg {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container-main {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.transparent-black {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.transparent-white {
+	background: rgba(255, 255, 255, 0.5);
+	color: #292929;
+}
+
+.heading {
+  font-size: 3em;
+  color: black;
+}
+
+/*---------------------------------Element Styles-----------------------------*/
+img {
+  max-width: 100%;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+footer {
+  padding: 3%;
+  margin: 0;
+}
+
+/*--------------------------------Mobile--------------------------------------*/
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-height: 560px) {
+}
