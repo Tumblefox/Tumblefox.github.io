@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formatto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <h1 class="whitespace-sm text-center">Formatto</h1>
+    <div class="whitespace-sm"></div>
+    <div class="centered main">
+      <h2 class="text-center">Source From Files</h2>
+      <input class="stackable input-padding" type="file" id="files" multiple="true">
+      <h2 class="text-center">Source Text</h2>
+      <textarea class="stackable input-padding" id="copy" placeholder="source"></textarea>
+      <input class="stackable input-padding" style="width: 50%;" type="text" id="delimiter" placeholder="delimiter (comma or newline by default)">
+      <h2 class="text-center">Open Tag</h2>
+      <input class="stackable input-padding" type="text" id="opener" placeholder="open tag">
+      <h2 class="text-center">Text Shell (what surrounds each object)</h2>
+      <input class="stackable input-padding" type="text" id="shell" placeholder="surrounded text ($$ denotes the object)">
+      <h2 class="text-center">Last Text Shell (what surrounds the last object)</h2>
+      <input class="stackable input-padding" type="text" id="lastShell" placeholder="surrounded text ($$ denotes the object)">
+      <h2 class="text-center">Close Tag</h2>
+      <input class="stackable input-padding" type="text" id="closer" placeholder="close tag">
+      <h2 class="text-center">Result</h2>
+      <textarea class="input-padding" id="result" placeholder="result"></textarea>
+      <button class="stackable-top" id="format" onclick="format()">Format</button>
+    </div>
+  </body>
+</html>

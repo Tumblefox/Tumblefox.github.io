@@ -1,0 +1,51 @@
+html {
+  background-color: black;
+  color: yellow;
+}
+
+h1, h2, h3 {
+  color: yellow;
+  font-family: garamond;
+}
+
+button {
+  border-color: yellow;
+  padding: 1%;
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.fileInput {
+
+}
+
+.stackable {
+  margin-bottom: 5%;
+}
+
+.stackable-top {
+  margin-top: 1%;
+}
+
+
+.whitespace-sm {
+  padding: 3%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.centered {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.input-padding {
+  padding: 1%;
+}
