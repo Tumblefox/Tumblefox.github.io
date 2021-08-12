@@ -1,0 +1,6 @@
+<script src="/js/nunjucks.min.js"></script>
+<script src="/js/script.js"></script>
+<script>
+  nunjucks.configure('/templates', { autoescape: true });
+  document.write(nunjucks.render('index.njk', {}));
+</script>

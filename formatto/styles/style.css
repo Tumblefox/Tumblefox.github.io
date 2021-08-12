@@ -15,9 +15,13 @@ button {
   border-radius: 10px;
 }
 
-input, textarea {
+input, textarea, select {
   width: 100%;
-  border-radius: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 300px;
 }
 
 .fileInput {
@@ -42,10 +46,17 @@ input, textarea {
 }
 
 .centered {
-  width: 80%;
-  margin-left: 10%;
+  display: block;
+  margin: auto;
 }
 
 .input-padding {
-  padding: 1%;
+  padding: 1% 0;
+}
+
+.main {
+  border-style: dotted;
+  border-color: yellow;
+  padding: 3%;
+  width: 80%;
 }

@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(to bottom, #0e0042 37%, #ff9900 100%);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: sans-serif;
+  color: white;
+}
+
+textarea, input, select {
+  color: white;
+  background-color: orange;
+  border-style: dashed;
+  border-color: yellow;
+}
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+#desc {
+}
+
+#main {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+#lists {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.list {
+  background: #0066ff;
+  border-style: dashed;
+  border-width: thin;
+  border-color: #99ccff;
+  display: inline-block;
+  padding: 2%;
+}
+
+.bubble {
+  background: #cc6600;
+  border-style: dashed;
+  border-width: thin;
+  border-color: yellow;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3%;
+  display: block;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.add-btn {
+  margin-top: 5%;
+  border-radius: 10px;
+  border-style: dashed;
+  border-width: thin;
+  border-color: yellow;
+  color: white;
+  background: red;
+}
+
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
