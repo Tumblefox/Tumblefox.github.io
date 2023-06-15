@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formatto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <h1 class="whitespace-sm text-center">Formatto</h1>
+    <p class="text-center">Description: format lists into structured data (array or csv).</p>
+    <div class="whitespace-sm"></div>
+    <div class="centered main">
+      <p>Get list of files</p>
+      <input class="stackable input-padding" type="file" id="files" multiple="true">
+
+      <h3 class="text-center">Source Text</h3>
+      <textarea class="stackable input-padding" id="copy" placeholder="source"></textarea>
+      <p>Replace</p>
+      <input class="input-padding" style="width: 50%; display: inline-flex;" type="text" id="rep-remove" placeholder="Text to replace">
+      <input class="input-padding" style="width: 50%; display: inline-flex;" type="text" id="rep-insert" placeholder="Replacement">
+      <button id="exe-rep">Execute</button>
+      <p>Remove</p>
+      <input class="input-padding" style="width: 50%; display: inline-flex;" type="text" id="remove" placeholder="Text or Regex">
+      <button id="exe-rem">Execute</button>
+      <p>Delimiter</p>
+      <input class="stackable input-padding" style="width: 50%;" type="text" id="delimiter" placeholder="delimiter (\n by default)">
+
+      <h3 class="text-center">Result</h3>
+      <textarea class="input-padding" id="result" placeholder="result"></textarea>
+      <p>Output Format</p>
+      <select class="stackable input-padding" id="formatType">
+        <option value="1">To Array</option>
+        <option value="2">TO CSV</option>
+      </select>
+      <button id="format">Format</button>
+    </div>
+  </body>
+</html>

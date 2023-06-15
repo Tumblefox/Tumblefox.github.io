@@ -1,0 +1,69 @@
+{
+  "subscriptions":
+  [
+  {
+    "name": "Lizard Hunter",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUeaqXvOAYBQSsx7Q5t1ceng&playnext=1&index=1"]
+    },
+    "tags": ["NSFW"]
+  },
+  {
+    "name": "Lizard gang",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUgBDALFyJFIXS3QTtNkR5jg&playnext=1&index=1"]
+    },
+    "tags": ["NSFW"]
+  },
+  {
+    "name": "FilcentTV",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUk_j91n3xOanAsrAcU0s68w&playnext=1&index=1"]
+    },
+    "tags": []
+  },
+  {
+    "name": "Riley Writtens",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UU3zLuAyUTEGJ15ZLaQEWBUQ&playnext=1&index=1"]
+    },
+    "tags": []
+  },
+  {
+    "name": "OnlySam",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUK73L-k8j6zogtqYpbett-A&playnext=1&index=1"]
+    },
+    "tags": []
+  },
+  {
+    "name": "Real Kenishaa",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUuefVtgghnhC6hoy5mFqovw&playnext=1&index=1"]
+    },
+    "tags": ["NSFW", "Thicc"]
+  },
+  {
+    "name": "Lizard Watch",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUsbOVAODp0VPPJuNA1EGozQ&playnext=1&index=1"]
+    },
+    "tags": ["NSFW"]
+  },
+  {
+    "name": "OhNoOsho",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UUSJe5wEQVI4wvncboDYlnEQ&playnext=1&index=1"]
+    },
+    "tags": ["NSFW", "3 A.M."]
+  },
+  {
+    "name": "Banzu",
+    "feeds": {
+      "youtube": ["https://www.youtube.com/playlist?list=UU1PgatxrzKAHPIZuq3tLEzA&playnext=1&index=1"]
+    },
+    "tags": []
+  }
+  ],
+  "favorites": []
+}

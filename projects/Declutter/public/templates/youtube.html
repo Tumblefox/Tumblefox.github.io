@@ -1,0 +1,11 @@
+
+  {% macro feed(sources) %}
+    {% for source in sources %}
+      <div class="col-12">
+        <div class="video-container">
+          <iframe src="{{ source }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    {% endfor %}
+  {% endmacro %}
+

@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Declutter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content=Track all your favorite content creators without their platforms tracking you.>
+    <script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/nunjucks.min.js"></script>
+
+<script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-inverse nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!--<li><a href="#">Page 1</a></li>-->
+    </ul>
+  </div>
+</nav>
+
+  	<div class="whitespace-md"></div>
+
+  	<main class="container-main" id="main">
+      
+  <h3 class="text-center whitespace-sm">Ø Declutter</h3>
+  <div class="whitespace-md"></div>
+
+
+  <div class="container p-3">
+    <div class="form-group">
+      <h4>Load Data</h4>
+      <input type="file" accept=".json" class="form-control mb-2" id="feed-file">
+      <!--<button id="load-feed-file" class="btn btn-primary" type="button">Add</button>-->
+    </div>
+  </div>
+
+  <div class="container p-3">
+    <div class="mb-4">
+      <h4>Content Creators</h4>
+      <button id="add-content-creator" class="btn btn-primary" type="button">Add</button>
+      <div class="row" id="content-creators">
+      </div>
+    </div>
+
+
+    <div class="mb-4">
+      <h4>Favorites</h4>
+      <div class="row" id="favorites">
+      </div>
+    </div>
+  </div>
+  <div class="whitespace-md"></div>
+
+  	</main>
+  	<div class="whitespace-md"></div>
+
+  	<footer id="footer">
+  <div id="">
+    <div class="row">
+      <div class="col-sm-6">
+        <div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

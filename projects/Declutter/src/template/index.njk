@@ -1,0 +1,35 @@
+{% extends "_layouts/default.njk" %}
+
+{% set title = "Declutter" %}
+{% set description = "Track all your favorite content creators without their platforms tracking you." %}
+
+{% block main %}
+  <h3 class="text-center whitespace-sm">Ø Declutter</h3>
+  <div class="whitespace-md"></div>
+
+
+  <div class="container p-3">
+    <div class="form-group">
+      <h4>Load Data</h4>
+      <input type="file" accept=".json" class="form-control mb-2" id="feed-file">
+      <!--<button id="load-feed-file" class="btn btn-primary" type="button">Add</button>-->
+    </div>
+  </div>
+
+  <div class="container p-3">
+    <div class="mb-4">
+      <h4>Content Creators</h4>
+      <button id="add-content-creator" class="btn btn-primary" type="button">Add</button>
+      <div class="row" id="content-creators">
+      </div>
+    </div>
+
+
+    <div class="mb-4">
+      <h4>Favorites</h4>
+      <div class="row" id="favorites">
+      </div>
+    </div>
+  </div>
+  <div class="whitespace-md"></div>
+{% endblock %}

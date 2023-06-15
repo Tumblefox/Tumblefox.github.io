@@ -1,0 +1,92 @@
+{% extends "./_includes/layouts/default.njk" %}
+
+{% set title = "" %}
+{% set description = "" %}
+
+{% set projects = [
+  {title: "Dialogue to JSON", url: "https://tumblefox.github.io/Dialogue-to-JSON/", image: "dialogue-to-json-thumbnail.png", startDate: "2/8/2020", description: "A static text-editor that saves lines of dialogue in JSON format. Styled like an SMS group chat and powered by Nunjucks.js, this tool aids writers in creating scripts that are ready for their digital media projects. This tool is ideal for video game dialogue."},
+  {title: "Auto Finance Calculator", url: "https://tumblefox.github.io/Auto-Finance-Calculator/", image: "auto-finance-calc-thumbnail.png", startDate: "6/10/2023", description: "This calculator can be used to find the total cost of owning a car, accounting for many costs left out by other estimation tools."},
+  {title: "PDF Form Filler", url: "https://tumblefox.github.io/PDF-Form-Filler/", image: "pdf-form-filler-thumbnail.png", startDate: "6/26/2021", description: "A web tool for filling out PDF forms that would otherwise have to be handwritten by hand. Includes text, checkbox and signature options."}
+] %}
+
+{% set galleries = [
+  {title: "Portfolio Mockup", thumbnail: "portfolio-thumbnail.png", image: "portfolio.png"},
+  {title: "Auto Website Mockup", thumbnail: "sieka-autos-thumbnail.png", image: "sieka-autos-1.png"},
+  {title: "KCC Mockup", thumbnail: "kcc-thumbnail.png", image: "kcc.png"}
+]%}
+
+{% block main %}
+  <section class="intro-card text-center">
+    <h1>
+      <span>Ajee Sieka</span>
+    </h1>
+    <h4>
+      <span>Developer Portfolio</span>
+    </h4>
+  </section>
+
+  <article>
+
+    <section id="about" class="emphasis-paragraph container">
+      <h4 class="section-header">
+        <span>About</span>
+      </h4>
+
+      <p>
+        As a Bellarmine University alumni and <b>full stack developer</b> with years of experience using <b>AWS</b>, I've learned that any challenge can be overcome with the right technologies, problem solving skills, and dedication. From <b>complex web applications</b> to <b>beautiful and responsive websites</b>, no project is unconquerable.
+      </p>
+
+      <p>
+        I am currently employed at <a href="https://www.rfxtechnologies.com/" target="_blank"><b><span id="rfx-blue">RF</span><span id="rfx-red">X</span> <span id="rfx-black">Technologies</span></b></a>.
+      </p>
+
+    </section>
+
+    <section id="projects" class="container">
+      <h4 class="section-header">
+        <span>Projects</span>
+      </h4>
+
+      <div class="pure-g">
+        {% for project in projects %}
+          <div class="pure-u-1-1 pure-u-md-1-3">
+            <img class="thumbnail" alt="{{ project.title }}" src="static/images/gallery/{{ project.image }}">
+
+            <h4>
+              <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+            </h4>
+
+            {% if project.startDate %}
+              <small>Began {{ project.startDate }}</small>
+            {% endif %}
+
+            <p>{{ project.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="gallery" class="container">
+      <h4 class="section-header">
+        <span>Gallery</span>
+      </h4>
+
+      <div class="pure-g">
+        {% for gallery in galleries %}
+          <div class="pure-u-1-2 pure-u-md-1-4">
+            <a href="static/images/gallery/{{ gallery.image }}" target="_blank">
+              <img class="thumbnail gallery-link" alt="{{ gallery.title }}" src="static/images/gallery/{{ gallery.thumbnail }}">
+            </a>
+            <div class="hidden gallery">
+              <img alt="{{ gallery.title }}" src="static/images/gallery/{{ gallery.thumbnail }}">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </article>
+{% endblock %}
+
+{% block customscripts %}
+{% endblock %}

@@ -1,0 +1,9 @@
+g rect {
+  fill:#fff;
+  stroke-width:1;
+  stroke:#000;
+}
+
+#vocabulary-list {
+  min-height: 250px;
+}

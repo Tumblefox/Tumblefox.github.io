@@ -1,0 +1,106 @@
+@font-face {
+  font-family: TitleFont;
+  src: url(/static/fonts/raleway.regular.ttf);
+}
+
+nav {
+  border-style: solid none dotted none;
+  border-width: thin;
+  border-color: #ccc;
+}
+nav li {
+  border-style: none dotted none  none;
+  border-width: thin;
+  border-color: #ccc;
+}
+nav .pure-menu-heading {
+  border-style: none dotted none  none;
+  border-width: thin;
+  border-color: #ccc;
+}
+
+article {
+  padding: 1.5rem;
+  background-repeat: repeat;
+  background-image: url("/static/images/pattern-1.png");
+}
+
+img {
+  max-width: 100%;
+}
+
+#about {
+
+}
+
+#rfx-blue {
+  color: #1A528B;
+}
+#rfx-red {
+  color: #BA2739;
+}
+#rfx-black {
+  color: #000000;
+}
+
+.intro-card {
+  background-color: #11121c;
+  border-width: thick;
+  border-style: none none dashed none;
+  border-color: lime;
+  font-family: TitleFont;
+  padding: 1rem;
+}
+.intro-card h1 {
+  font-size: 5rem;
+  margin-top: 0;
+}
+.intro-card h1 span {
+  color: #ffffff;
+  background-color: black;
+  /* box-shadow: 5px 5px 0 red, 10px 10px 0 yellow, 15px 15px 0 blue, 20px 20px 0 green, 25px 25px 0 orange; */
+  white-space: nowrap;
+}
+.intro-card h4 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.intro-card h4 span {
+  color: lime;
+  /* background-color: #fffbdb;
+  border-radius: 10px;
+  border-style: dashed solid dashed solid;
+  border-width: thin thick thin thick;
+  border-color: brown; */
+}
+
+.container {
+  padding: 1rem;
+}
+
+.emphasis-paragraph {
+  border-style: none none none solid;
+  border-color: lime;
+}
+
+.section-header span {
+  border-style: none none dashed none;
+  border-width: thin;
+  border-color: lime;
+  font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.thumbnail {
+  width: 200px;
+}
+
+@media (max-width:600px) {
+  .intro-card h1 {
+    font-size: 3rem !important;
+    margin-top: 0;
+  }
+}
