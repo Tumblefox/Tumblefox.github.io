@@ -1,9 +1,0 @@
-{% raw %}
-  {% macro feed(sources) %}
-    {% for source in sources %}
-      <div class="col-12">
-        <a class="twitter-timeline" href="{{ source }}">Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-    {% endfor %}
-  {% endmacro %}
-{% endraw %}
