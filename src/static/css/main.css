@@ -46,9 +46,10 @@ img {
 }
 
 .intro-card {
-  background-color: #11121c;
   /* background-repeat: repeat;
-  background-image: url("/static/images/background-pattern-1.png"); */
+  background-image: url("/static/images/background-pattern-1.png");
+  background-size: 50px; */
+  background-color: #11121c;
   border-width: thin;
   border-style: none none solid none;
   border-color: #ffffff;
@@ -58,10 +59,10 @@ img {
 .intro-card h1 {
   font-size: 5rem;
   margin-top: 0;
+  text-shadow: 2px 2px 2px #474747;
 }
 .intro-card h1 span {
   color: #ffffff;
-  -webkit-text-stroke: 0.01px #ffffff;
   background-color: black;
   white-space: nowrap;
 }
