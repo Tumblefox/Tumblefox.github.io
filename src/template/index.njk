@@ -1,6 +1,6 @@
 {% extends "./_includes/layouts/default.njk" %}
 
-{% set title = "" %}
+{% set title = "Ajee Sieka's Portfolio" %}
 {% set description = "" %}
 
 {% set categories = {
@@ -9,15 +9,10 @@
     description: "Includes web applications and websites showcasing UI/UX design, client-side scripting, and back end development.",
     skills: ["HTML", "JS", "Node.js", "Tailwind CSS", "Bootstrap", "Nunjucks", "Eleventy", "AWS"]
   },
-  "Apps": {
-    id: "apps",
-    description: "Mobile apps developed with Flutter.",
-    skills: ["Flutter", "Android", "Dart", "Gradle", "Java"]
-  },
   "Games": {
     id: "games",
-    description: "Games built with a variety of target platforms using Godot.",
-    skills: ["Python", "GDScript"]
+    description: "Games built for a variety of target platforms using different engines and frameworks.",
+    skills: ["Python", "GDScript", "Java", "LibGDX"]
   }
 } %}
 
@@ -28,7 +23,8 @@
     url: "https://www.executivemcap.com/",
     image: "executivemcap-logo-md.png",
     startDate: "12/7/2023",
-    description: "Executive Mortgage Capital's website, currently a work in progress. Lists basic information about the business with plans to take mortgage applications."
+    description: "Executive Mortgage Capital's website, currently a work in progress. Lists basic information about the business with plans to take mortgage applications.",
+    exclude: true
   },
   {
     title: "Auto Finance Calculator",
@@ -39,14 +35,6 @@
     description: "This calculator can be used to find the total cost of owning a car, accounting for many costs left out by other estimation tools."
   },
   {
-    title: "PDF Form Filler",
-    category: "Web",
-    url: "https://tumblefox.github.io/PDF-Form-Filler/",
-    image: "pdf-form-filler-thumbnail.png",
-    startDate: "6/26/2021",
-    description: "A web tool for filling out PDF forms that would otherwise have to be handwritten by hand. Includes text, checkbox and signature options."
-  },
-  {
     title: "Dialogue to JSON",
     category: "Web",
     url: "https://tumblefox.github.io/Dialogue-to-JSON/",
@@ -54,29 +42,37 @@
     startDate: "2/8/2020",
     description: "A static text-editor that saves lines of dialogue in JSON format. Styled like an SMS group chat and powered by Nunjucks.js."
   },
-
   {
-    title: "BackCompat",
-    category: "Apps",
-    url: "https://play.google.com/store/apps/details?id=com.darkdispo.backcompat",
-    image: "backcompat.webp",
-    startDate: "4/13/2022",
-    description: "BackCompat is the fastest way to check backward compatibility for video games. This app works without an internet connection: all data is saved offline for reliability and speed."
+    title: "PDF Form Filler",
+    category: "Web",
+    url: "https://tumblefox.github.io/PDF-Form-Filler/",
+    image: "pdf-form-filler-thumbnail.png",
+    startDate: "6/26/2021",
+    description: "A web tool for filling out PDF forms that would otherwise have to be handwritten by hand. Includes text, checkbox and signature options."
   },
 
   {
     title: "Cyber Riches: Slot RPG",
     category: "Games",
-    url: "https://play.google.com/store/apps/details?id=com.darkdispo.cyberriches",
+    url: "https://darkdispo.itch.io/cyber-riches-slot-rpg",
     image: "cyber-riches.webp",
     startDate: "3/21/2020",
     description: "In this slot machine and turn-based RPG fusion, battle against waves of enemies and expand your wealth with each victory."
+  },
+  {
+    title: "Lost Asylum",
+    category: "Games",
+    url: "https://github.com/Tumblefox/CS400Game/tree/master",
+    image: "lost-asylum.png",
+    startDate: "2017",
+    description: "A Point and Click puzzle game developed as a Software Engineering class project."
   }
 ] %}
 
 {% set galleries = [
   {title: "Portfolio Mockup", thumbnail: "portfolio-thumbnail.png", image: "portfolio.png"},
   {title: "Auto Website Mockup", thumbnail: "sieka-autos-thumbnail.png", image: "sieka-autos-1.png"},
+  {title: "Non-Profit Foundation Mockup", thumbnail: "non-profit-thumbnail.png", image: "non-profit-mockup.png"},
   {title: "KCC Mockup", thumbnail: "kcc-thumbnail.png", image: "kcc.png"}
 ]%}
 
@@ -97,7 +93,7 @@
       </h4>
 
       <p>
-        As a Bellarmine University alumni and <b>full stack developer</b> with 5+ years of experience using <b>AWS</b>, I've learned that <i>any challenge can be overcome</i> with the right technologies, problem solving skills, and dedication.
+        As a Bellarmine University alumni and <b>full stack developer</b> with 6+ years of experience using <b>AWS</b>, I've learned that <i>any challenge can be overcome</i> with the right technologies, problem solving skills, and dedication.
       </p>
 
       <p>
@@ -121,7 +117,7 @@
         </h4>
 
         <p class="section-anchors">
-          <a href="#web">Web</a> <a href="#apps">Apps</a> <a href="#games">Games</a>
+          <a href="#web">Web</a> <a href="#games">Games</a>
         </p>
       </div>
 

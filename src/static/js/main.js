@@ -13,8 +13,7 @@
       {
         targets: ".intro-card h1 span",
         // color: "#000000",
-        boxShadow: "7px 7px 0 white",
-        textShadow: "2px 2px 2px #474747"
+        boxShadow: "7px 7px 0 white"
       },
       {
         targets: ".intro-card p",

@@ -46,9 +46,9 @@ img {
 }
 
 .intro-card {
-  /* background-repeat: repeat;
+  background-repeat: repeat;
   background-image: url("/static/images/background-pattern-1.png");
-  background-size: 50px; */
+  background-size: 50px;
   background-color: #11121c;
   border-width: thin;
   border-style: none none solid none;
@@ -138,7 +138,7 @@ img {
   border-width: 0.5px;
 }
 
-.border-seperation-bottom {
+.border-separation-bottom {
   border-style: none none solid none;
   border-width: 0.5px;
 }
