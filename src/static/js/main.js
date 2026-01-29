@@ -26,8 +26,8 @@
       }
     ];
 
-    animations.forEach((animation) => {
-      animationTimeline.add(animation);
-    });
+    // animations.forEach((animation) => {
+    //   animationTimeline.add(animation);
+    // });
   });
 })();

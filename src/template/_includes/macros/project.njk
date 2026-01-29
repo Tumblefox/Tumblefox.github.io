@@ -1,0 +1,32 @@
+{% macro preview(projects) %}
+<div>
+  {% for project in projects %}
+    {% if not project.exclude %}
+      <div class="project-preview-container border-thin-selectable">
+        <a href="{{ project.url }}" target="_blank">
+        <div class="grid grid-cols-4 gap-4 project-preview">
+          <div class="sm:col-span-2 md:col-span-1">
+            <div>
+              <img class="thumbnail" alt="{{ project.title }}" src="static/images/gallery/{{ project.image }}">
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 md:col-span-3">
+            <div class="project-preview-text">
+              <p class="project-preview-title">
+                <strong>{{ project.title }}</strong>
+              </p>
+
+              <p class="project-preview-description">
+                {{ project.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% endmacro %}

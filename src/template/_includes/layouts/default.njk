@@ -11,11 +11,12 @@
 
   <body>
     <header>
+      {% include "../components/navbar.njk" %}
       {% block header %}
       {% endblock %}
     </header>
 
-    {% include "../components/navbar.njk" %}
+
 
   	<main>
       {% block main %}

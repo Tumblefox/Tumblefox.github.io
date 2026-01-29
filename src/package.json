@@ -11,16 +11,21 @@
     "type": "git",
     "url": "git+https://github.com/Tumblefox/Tumblefox.github.io.git"
   },
-  "author": "A'Jee Sieka",
+  "author": "Ajee Sieka",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tumblefox/Tumblefox.github.io/issues"
   },
   "homepage": "https://github.com/Tumblefox/Tumblefox.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/postcss": "^4.1.18",
+    "cssnano": "^7.1.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
   },
   "dependencies": {
     "animejs": "^3.2.1"
-  }
+  },
+  "type": "module"
 }

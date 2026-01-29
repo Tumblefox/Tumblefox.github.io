@@ -1,73 +1,93 @@
 {% extends "./_includes/layouts/default.njk" %}
 
+{% import "./_includes/macros/project.njk" as project %}
+
 {% set title = "Ajee Sieka's Portfolio" %}
 {% set description = "" %}
 
-{% set categories = {
-  "Web": {
-    id: "web",
-    description: "Includes web applications and websites showcasing UI/UX design, client-side scripting, and back end development.",
-    skills: ["HTML", "JS", "Node.js", "Tailwind CSS", "Bootstrap", "Nunjucks", "Eleventy", "AWS"]
-  },
-  "Games": {
-    id: "games",
-    description: "Games built for a variety of target platforms using different engines and frameworks.",
-    skills: ["Python", "GDScript", "Java", "LibGDX"]
+{%
+  set categories = {
+    "Web": {
+      id: "web",
+      description: "Web apps and websites showcasing UI/UX design, client-side scripting, and back end development.",
+      skills: ["Astro", "HTML", "JS", "Node.js", "Tailwind CSS", "Bootstrap", "Nunjucks", "Eleventy", "AWS", "SQL"],
+      topSkills: ["Astro", "Nunjucks", "JavaScript", "Node.js", "SQL", "HTML", "CSS"]
+    },
+    "Games": {
+      id: "games",
+      description: "Games built for a variety of target platforms using different engines and frameworks.",
+      skills: ["Python", "GDScript", "Java", "LibGDX"],
+      exclude: true
+    }
   }
-} %}
+%}
 
-{% set projects = [
-  {
-    title: "executivemcap.com",
-    category: "Web",
-    url: "https://www.executivemcap.com/",
-    image: "executivemcap-logo-md.png",
-    startDate: "12/7/2023",
-    description: "Executive Mortgage Capital's website, currently a work in progress. Lists basic information about the business with plans to take mortgage applications.",
-    exclude: true
-  },
-  {
-    title: "Auto Finance Calculator",
-    category: "Web",
-    url: "https://tumblefox.github.io/Auto-Finance-Calculator/",
-    image: "auto-finance-calc-thumbnail.png",
-    startDate: "6/10/2023",
-    description: "This calculator can be used to find the total cost of owning a car, accounting for many costs left out by other estimation tools."
-  },
-  {
-    title: "Dialogue to JSON",
-    category: "Web",
-    url: "https://tumblefox.github.io/Dialogue-to-JSON/",
-    image: "dialogue-to-json-thumbnail.png",
-    startDate: "2/8/2020",
-    description: "A static text-editor that saves lines of dialogue in JSON format. Styled like an SMS group chat and powered by Nunjucks.js."
-  },
-  {
-    title: "PDF Form Filler",
-    category: "Web",
-    url: "https://tumblefox.github.io/PDF-Form-Filler/",
-    image: "pdf-form-filler-thumbnail.png",
-    startDate: "6/26/2021",
-    description: "A web tool for filling out PDF forms that would otherwise have to be handwritten by hand. Includes text, checkbox and signature options."
-  },
+{%
+  set selectedCategory = "Web"
+%}
 
-  {
-    title: "Cyber Riches: Slot RPG",
-    category: "Games",
-    url: "https://darkdispo.itch.io/cyber-riches-slot-rpg",
-    image: "cyber-riches.webp",
-    startDate: "3/21/2020",
-    description: "In this slot machine and turn-based RPG fusion, battle against waves of enemies and expand your wealth with each victory."
-  },
-  {
-    title: "Lost Asylum",
-    category: "Games",
-    url: "https://github.com/Tumblefox/CS400Game/tree/master",
-    image: "lost-asylum.png",
-    startDate: "2017",
-    description: "A Point and Click puzzle game developed as a Software Engineering class project."
-  }
-] %}
+{%
+  set projects = [
+    {
+      title: "JobAlign",
+      category: "Web",
+      url: "https://tumblefox.github.io/JobAlign/",
+      image: "job-align.jpg",
+      startDate: "03/15/2025",
+      startDate: "03/17/2025",
+      description: "Match your resume with job the description."
+    },
+    {
+      title: "executivemcap.com",
+      category: "Web",
+      url: "https://www.executivemcap.com/",
+      image: "executivemcap-logo-md.png",
+      startDate: "12/7/2023",
+      description: "Executive Mortgage Capital's website.",
+      exclude: true
+    },
+    {
+      title: "Auto Finance Calculator",
+      category: "Web",
+      url: "https://tumblefox.github.io/Auto-Finance-Calculator/",
+      image: "auto-finance-calc-thumbnail.png",
+      startDate: "6/10/2023",
+      description: "Total cost of ownership calculator."
+    },
+    {
+      title: "Dialogue to JSON",
+      category: "Web",
+      url: "https://tumblefox.github.io/Dialogue-to-JSON/",
+      image: "dialogue-to-json-thumbnail.png",
+      startDate: "2/8/2020",
+      description: "JSON-based dialogue editor."
+    },
+    {
+      title: "PDF Form Filler",
+      category: "Web",
+      url: "https://tumblefox.github.io/PDF-Form-Filler/",
+      image: "pdf-form-filler-thumbnail.png",
+      startDate: "6/26/2021",
+      description: "Fill out and sign PDF forms."
+    },
+    {
+      title: "Cyber Riches: Slot RPG",
+      category: "Games",
+      url: "https://darkdispo.itch.io/cyber-riches-slot-rpg",
+      image: "cyber-riches.webp",
+      startDate: "3/21/2020",
+      description: "Turn-based, slot machine RPG."
+    },
+    {
+      title: "Lost Asylum",
+      category: "Games",
+      url: "https://github.com/Tumblefox/CS400Game/tree/master",
+      image: "lost-asylum.png",
+      startDate: "2017",
+      description: "Point and Click puzzle game."
+    }
+  ]
+%}
 
 {% set galleries = [
   {title: "Portfolio Mockup", thumbnail: "portfolio-thumbnail.png", image: "portfolio.png"},
@@ -82,92 +102,103 @@
       <span>Ajee Sieka</span>
     </h1>
     <p>
-      <span>Developer Portfolio</span>
+      <span>Full-stack web developer · 8 years experience</span>
     </p>
+
+    {% for category, values in categories %}
+      {% if selectedCategory == category %}
+        <div class="mb-2">
+          {% for skill in values.topSkills %}
+            <span class="skill-tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <button class="steel-button">Hire Me</button>
   </section>
 
   <article>
-    <section id="about" class="emphasis-paragraph container">
-      <h4 class="section-header">
-        <span>About</span>
-      </h4>
-
-      <p>
-        As a Bellarmine University alumni and <b>full stack developer</b> with 6+ years of experience using <b>AWS</b>, I've learned that <i>any challenge can be overcome</i> with the right technologies, problem solving skills, and dedication.
-      </p>
-
-      <p>
-        From <b>complex web applications</b> to <b>beautiful, responsive websites</b>, no project is unconquerable.
-      </p>
-
-      <p>
-        I am currently employed at <a href="https://www.rfxtechnologies.com/" target="_blank"><b><span id="rfx-blue">RF</span><span id="rfx-red">X</span> <span id="rfx-white">Technologies</span></b></a>.
-      </p>
-
-      <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" class="link" target="_blank">
-        <img class="social-icon" alt="LinkedIn" src="/static/images/linkedin.png">
-      </a>
-    </section>
-
-    <section id="projects" class="container">
-
-      <div class="section-header">
-        <h4>
-          <span>Projects</span>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <section id="about" class="emphasis-paragraph container">
+        <h4 class="section-header">
+          <span>About</span>
         </h4>
 
-        <p class="section-anchors">
-          <a href="#web">Web</a> <a href="#games">Games</a>
+        <p>
+          I'm a <b>full-stack web developer</b> with 8 years of experience building reliable, user-focused web applications.
         </p>
-      </div>
 
-      {% for category, projects in projects | groupby('category') %}
-        <section class="container border-seperation" id="{{ categories[category].id }}">
+        <p>
+          I've worked across <b>frontend and backend systems</b>, with a focus on <b>clarity</b>, <b>performance</b>, and <b>maintainability</b>. I enjoy turning complex requirements into straightforward, usable tools, especially internal applications, content-driven sites, and workflow-heavy interfaces.
+        </p>
 
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-1-2">
-              <div style="position: sticky; top: 20px;">
-                <div class="subsection-header">
-                  <h5><span>{{ category }}</span></h5>
-                </div>
+        <p>
+          My background spans modern frontend development and server-side work, including <b>templating</b>, <b>APIs</b>, <b>data modeling</b>, and <b>integration</b> with third-party services. I value pragmatic technology choices, clear tradeoffs, and writing code that's easy to understand and maintain over time.
+        </p>
 
-                <p>{{ categories[category].description }}</p>
+        <p>
+          I'm <b>framework-agnostic</b> and comfortable ramping into new stacks quickly, with experience in Astro, Nunjucks, JavaScript, Node.js, SQL, and related web technologies.
+        </p>
 
-                <p>
-                  {% for skill in categories[category].skills %}
-                    <span class="skill-tag">{{ skill }}</span>
-                  {% endfor %}
-                </p>
+        {% for category, values in categories %}
+          {% if selectedCategory == category %}
+            <div class="mb-2">
+              <div class="subsection-header">
+                <h5><span>{{ category }} Skills</span></h5>
               </div>
-            </div>
 
-            <div class="pure-u-1 pure-u-md-1-2">
-              {% include "./_includes/components/project-showcase.njk" %}
-            </div>
-          </div>
+              {#
+              <p>{{ values.description }}</p>
+              #}
 
-        </section>
-      {% endfor %}
-    </section>
+              <p>
+                {% for skill in values.skills %}
+                  <span class="skill-tag">{{ skill }}</span>
+                {% endfor %}
+              </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" class="link" target="_blank">
+          <img class="social-icon" alt="LinkedIn" src="/static/images/linkedin.png">
+        </a>
+      </section>
+
+      <section id="projects">
+        <div class="section-header">
+          <h4>
+            <span>Projects</span>
+          </h4>
+        </div>
+
+        {% for category, projects in projects | groupby('category') %}
+          {% if selectedCategory == category %}
+            <section class="container">
+              {{ project.preview(projects) }}
+            </section>
+          {% endif %}
+        {% endfor %}
+      </section>
+    </div>
+
 
     <section id="gallery" class="container">
       <h4 class="section-header">
         <span>Gallery</span>
       </h4>
 
-      <p>
-        A collection of mockups and project photos.
-      </p>
-
-      <div class="pure-g">
+      <div class="grid grid-cols-4 gap-4">
         {% for gallery in galleries %}
-          <div class="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
+          <div>
             <a href="static/images/gallery/{{ gallery.image }}" target="_blank">
-              <img class="gallery-link border-thin-selectable" alt="{{ gallery.title }}" src="static/images/gallery/{{ gallery.thumbnail }}">
+              <img
+                class="gallery-link border-thin-selectable"
+                alt="{{ gallery.title }}"
+                src="static/images/gallery/{{ gallery.thumbnail }}"
+              />
             </a>
-            <div class="hidden gallery">
-              <img alt="{{ gallery.title }}" src="static/images/gallery/{{ gallery.thumbnail }}">
-            </div>
           </div>
         {% endfor %}
       </div>

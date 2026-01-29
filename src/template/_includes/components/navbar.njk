@@ -1,14 +1,25 @@
-{#<nav class="pure-menu pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading pure-menu-link">A'Jee Sieka</a>
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item">
-            <a href="#about" class="pure-menu-link">About</a>
-        </li>
-        <li class="pure-menu-item">
-            <a href="#projects" class="pure-menu-link">Projects</a>
-        </li>
-        <li class="pure-menu-item">
-            <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" class="pure-menu-link">LinkedIn</a>
-        </li>
-    </ul>
-</nav>#}
+{%
+  set links = [
+    {
+      title: "Projects",
+      href: "#projects"
+    },
+    {
+      title: "LinkedIn", 
+      href: "https://www.linkedin.com/in/a-jee-sieka-9b0400163/",
+      target: "_blank"
+    }
+  ]
+%}
+
+<nav>
+  <ul>
+    {% for link in links %}
+      <li>
+        <a href="{{ link.href }}" target="{{ link.target if link.target else "_self" }}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
