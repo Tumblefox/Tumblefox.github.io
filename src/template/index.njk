@@ -29,6 +29,14 @@
 {%
   set projects = [
     {
+      title: "PDF Form Filler",
+      category: "Web",
+      url: "https://tumblefox.github.io/PDF-Form-Filler/",
+      image: "pdf-form-filler-thumbnail.png",
+      startDate: "6/26/2021",
+      description: "Fill out and sign PDF forms."
+    },
+    {
       title: "JobAlign",
       category: "Web",
       url: "https://tumblefox.github.io/JobAlign/",
@@ -62,14 +70,7 @@
       startDate: "2/8/2020",
       description: "JSON-based dialogue editor."
     },
-    {
-      title: "PDF Form Filler",
-      category: "Web",
-      url: "https://tumblefox.github.io/PDF-Form-Filler/",
-      image: "pdf-form-filler-thumbnail.png",
-      startDate: "6/26/2021",
-      description: "Fill out and sign PDF forms."
-    },
+
     {
       title: "Cyber Riches: Slot RPG",
       category: "Games",
@@ -115,7 +116,9 @@
       {% endif %}
     {% endfor %}
 
-    <button class="steel-button">Hire Me</button>
+    <a href="mailto:ajee.sieka@gmail.com">
+      <button class="steel-button">Contact Me</button>
+    </a>
   </section>
 
   <article>
@@ -183,7 +186,7 @@
       </section>
     </div>
 
-
+    {#
     <section id="gallery" class="container">
       <h4 class="section-header">
         <span>Gallery</span>
@@ -203,6 +206,7 @@
         {% endfor %}
       </div>
     </section>
+    #}
 
   </article>
 {% endblock %}
