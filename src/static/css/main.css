@@ -17,7 +17,8 @@
 
 :root {
   --steel-color: linear-gradient(to left, #60696D, #D3D2D5, #7C7F85, #60696D, #D3D2D5);
-  --highlight-color: lime;
+  --gold-color: linear-gradient(to left, #7a5c1e, #f5e6a8, #c9a23f, #7a5c1e, #f5e6a8);
+  --highlight-color: #2ecc71;
 }
 
 body, html {
@@ -31,6 +32,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Anklepants;
+  color: #121212;
 }
 
 nav {
@@ -74,11 +76,16 @@ img {
   max-width: 100%;
 }
 
+.bg-pattern {
+  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 0px);
+  background-size: 20px 20px;
+}
+
 .steel-button {
   padding: 10px;
   background: linear-gradient(#D3D2D5 10px, #60696D 15px, #7C7F85 2px);
   border-style: none none solid solid;
-  border-color: #ffffff;
+  border-color: #000000;
   border-width: 1px;
   transition: 0.3s;
   clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%);
@@ -136,6 +143,9 @@ img {
 .project-preview-container {
   margin-bottom: 10px;
   border-width: 1px;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .project-preview {
@@ -151,6 +161,20 @@ img {
 
 .project-preview-text {
   padding: 10px 0;
+}
+
+.project-preview-arrow {
+  font-weight: bold;
+  font-size: 3em;
+  color: var(--highlight-color);
+  position: absolute;
+  right: -100px;
+  top: 20%;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.project-preview-container:hover .project-preview-arrow {
+  right: 20px;
 }
 
 .emphasis-paragraph {
@@ -224,7 +248,7 @@ img {
 }
 
 .thumbnail {
-  width: 200px;
+  width: 200px; 
 }
 
 .skill-tag {
@@ -236,6 +260,21 @@ img {
   border-width: 1px;
   padding: 3px;
   line-height: 27px;
+}
+
+.top-skill-tag {
+  --c1: #60696D;
+  --c2: #D3D2D5;
+  --c3: #7C7F85;
+
+  background: linear-gradient(
+    to left,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1),
+    var(--c2)
+  );
 }
 
 .social-icon {

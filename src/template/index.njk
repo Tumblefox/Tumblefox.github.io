@@ -10,7 +10,7 @@
     "Web": {
       id: "web",
       description: "Web apps and websites showcasing UI/UX design, client-side scripting, and back end development.",
-      skills: ["Astro", "HTML", "JS", "Node.js", "Tailwind CSS", "Bootstrap", "Nunjucks", "Eleventy", "AWS", "SQL"],
+      skills: ["Astro", "Nunjucks", "JavaScript", "Node.js", "SQL", "HTML", "CSS", "Tailwind", "Eleventy", "AWS",  "Python"],
       topSkills: ["Astro", "Nunjucks", "JavaScript", "Node.js", "SQL", "HTML", "CSS"]
     },
     "Games": {
@@ -108,17 +108,19 @@
 
     {% for category, values in categories %}
       {% if selectedCategory == category %}
-        <div class="mb-2">
+        <div class="mb-2 flex flex-wrap justify-center gap-2" id="top-skills">
           {% for skill in values.topSkills %}
-            <span class="skill-tag">{{ skill }}</span>
+            <span class="skill-tag top-skill-tag block flex-initial">{{ skill }}</span>
           {% endfor %}
         </div>
       {% endif %}
     {% endfor %}
 
-    <a href="mailto:ajee.sieka@gmail.com">
-      <button class="steel-button">Contact Me</button>
-    </a>
+    <div id="call-to-action">
+      <a href="mailto:ajee.sieka@gmail.com">
+        <button class="steel-button">Contact Me</button>
+      </a>
+    </div>
   </section>
 
   <article>
@@ -148,7 +150,7 @@
           {% if selectedCategory == category %}
             <div class="mb-2">
               <div class="subsection-header">
-                <h5><span>{{ category }} Skills</span></h5>
+                <h5><span>Skills</span></h5>
               </div>
 
               {#
@@ -169,7 +171,7 @@
         </a>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="bg-pattern">
         <div class="section-header">
           <h4>
             <span>Projects</span>

@@ -5,39 +5,15 @@ import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 
+import * as esbuild from 'esbuild';
+
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./static/**/*");
 
-  eleventyConfig.on('eleventy.after', async () => {
-    const tailwindInputPath = path.resolve('./static/css/main.css');
-
-    const tailwindOutputPath = '../static/css/main.css';
-
-    const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-
-    const outputDir = path.dirname(tailwindOutputPath);
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    const result = await processor.process(cssContent, {
-      from: tailwindInputPath,
-      to: tailwindOutputPath,
-    });
-
-    fs.writeFileSync(tailwindOutputPath, result.css);
+  eleventyConfig.on("eleventy.after", async () => {
+    await bundleTailwind();
+    await bundleJS();
   });
-
-  const processor = postcss([
-    //compile tailwind
-    tailwindcss(),
-
-    //minify tailwind css
-    cssnano({
-      preset: 'default',
-    }),
-  ]);
-
 
   return {
     dir: {
@@ -45,4 +21,38 @@ export default function(eleventyConfig) {
       output: "../"
     }
   }
+}
+
+async function bundleTailwind() {
+  const tailwindInputPath = path.resolve("./static/css/main.css");
+  const tailwindOutputPath = "../static/css/main.css";
+  const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+  const outputDir = path.dirname(tailwindOutputPath);
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  // Compile and minify Tailwind
+  const processor = postcss([
+    tailwindcss(),
+    cssnano({
+      preset: "default",
+    }),
+  ]);
+
+  const result = await processor.process(cssContent, {
+    from: tailwindInputPath,
+    to: tailwindOutputPath,
+  });
+
+  fs.writeFileSync(tailwindOutputPath, result.css);
+}
+
+async function bundleJS() {
+  await esbuild.build({
+    entryPoints: ["./static/js/main.js"],
+    bundle: true,
+    outfile: "../static/js/main.js",
+  });
 }

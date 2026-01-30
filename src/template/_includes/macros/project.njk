@@ -5,13 +5,13 @@
       <div class="project-preview-container border-thin-selectable">
         <a href="{{ project.url }}" target="_blank">
         <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="sm:col-span-2 md:col-span-1">
+          <div class="col-span-2 md:col-span-1">
             <div>
               <img class="thumbnail" alt="{{ project.title }}" src="static/images/gallery/{{ project.image }}">
             </div>
           </div>
 
-          <div class="sm:col-span-2 md:col-span-3">
+          <div class="col-span-2 md:col-span-3">
             <div class="project-preview-text">
               <p class="project-preview-title">
                 <strong>{{ project.title }}</strong>
@@ -24,9 +24,10 @@
           </div>
         </div>
         </a>
+
+        <div class="project-preview-arrow">&#10174;</div>
       </div>
     {% endif %}
   {% endfor %}
 </div>
-
 {% endmacro %}

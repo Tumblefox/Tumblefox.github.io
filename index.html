@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <script src="static/js/main.js"></script>
-<script src="static/js/anime.min.js"></script>
 
     <link rel="stylesheet" href="static/css/main.css">
 
@@ -52,21 +51,21 @@
 
     
       
-        <div class="mb-2">
+        <div class="mb-2 flex flex-wrap justify-center gap-2" id="top-skills">
           
-            <span class="skill-tag">Astro</span>
+            <span class="skill-tag top-skill-tag block flex-initial">Astro</span>
           
-            <span class="skill-tag">Nunjucks</span>
+            <span class="skill-tag top-skill-tag block flex-initial">Nunjucks</span>
           
-            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag top-skill-tag block flex-initial">JavaScript</span>
           
-            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag top-skill-tag block flex-initial">Node.js</span>
           
-            <span class="skill-tag">SQL</span>
+            <span class="skill-tag top-skill-tag block flex-initial">SQL</span>
           
-            <span class="skill-tag">HTML</span>
+            <span class="skill-tag top-skill-tag block flex-initial">HTML</span>
           
-            <span class="skill-tag">CSS</span>
+            <span class="skill-tag top-skill-tag block flex-initial">CSS</span>
           
         </div>
       
@@ -74,9 +73,11 @@
       
     
 
-    <a href="mailto:ajee.sieka@gmail.com">
-      <button class="steel-button">Contact Me</button>
-    </a>
+    <div id="call-to-action">
+      <a href="mailto:ajee.sieka@gmail.com">
+        <button class="steel-button">Contact Me</button>
+      </a>
+    </div>
   </section>
 
   <article>
@@ -106,7 +107,7 @@
           
             <div class="mb-2">
               <div class="subsection-header">
-                <h5><span>Web Skills</span></h5>
+                <h5><span>Skills</span></h5>
               </div>
 
               
@@ -115,23 +116,25 @@
                 
                   <span class="skill-tag">Astro</span>
                 
-                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">Nunjucks</span>
                 
-                  <span class="skill-tag">JS</span>
+                  <span class="skill-tag">JavaScript</span>
                 
                   <span class="skill-tag">Node.js</span>
                 
-                  <span class="skill-tag">Tailwind CSS</span>
+                  <span class="skill-tag">SQL</span>
                 
-                  <span class="skill-tag">Bootstrap</span>
+                  <span class="skill-tag">HTML</span>
                 
-                  <span class="skill-tag">Nunjucks</span>
+                  <span class="skill-tag">CSS</span>
+                
+                  <span class="skill-tag">Tailwind</span>
                 
                   <span class="skill-tag">Eleventy</span>
                 
                   <span class="skill-tag">AWS</span>
                 
-                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Python</span>
                 
               </p>
             </div>
@@ -145,7 +148,7 @@
         </a>
       </section>
 
-      <section id="projects">
+      <section id="projects" class="bg-pattern">
         <div class="section-header">
           <h4>
             <span>Projects</span>
@@ -162,13 +165,13 @@
       <div class="project-preview-container border-thin-selectable">
         <a href="https://tumblefox.github.io/PDF-Form-Filler/" target="_blank">
         <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="sm:col-span-2 md:col-span-1">
+          <div class="col-span-2 md:col-span-1">
             <div>
               <img class="thumbnail" alt="PDF Form Filler" src="static/images/gallery/pdf-form-filler-thumbnail.png">
             </div>
           </div>
 
-          <div class="sm:col-span-2 md:col-span-3">
+          <div class="col-span-2 md:col-span-3">
             <div class="project-preview-text">
               <p class="project-preview-title">
                 <strong>PDF Form Filler</strong>
@@ -181,6 +184,8 @@
           </div>
         </div>
         </a>
+
+        <div class="project-preview-arrow">&#10174;</div>
       </div>
     
   
@@ -188,13 +193,13 @@
       <div class="project-preview-container border-thin-selectable">
         <a href="https://tumblefox.github.io/JobAlign/" target="_blank">
         <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="sm:col-span-2 md:col-span-1">
+          <div class="col-span-2 md:col-span-1">
             <div>
               <img class="thumbnail" alt="JobAlign" src="static/images/gallery/job-align.jpg">
             </div>
           </div>
 
-          <div class="sm:col-span-2 md:col-span-3">
+          <div class="col-span-2 md:col-span-3">
             <div class="project-preview-text">
               <p class="project-preview-title">
                 <strong>JobAlign</strong>
@@ -207,6 +212,8 @@
           </div>
         </div>
         </a>
+
+        <div class="project-preview-arrow">&#10174;</div>
       </div>
     
   
@@ -216,13 +223,13 @@
       <div class="project-preview-container border-thin-selectable">
         <a href="https://tumblefox.github.io/Auto-Finance-Calculator/" target="_blank">
         <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="sm:col-span-2 md:col-span-1">
+          <div class="col-span-2 md:col-span-1">
             <div>
               <img class="thumbnail" alt="Auto Finance Calculator" src="static/images/gallery/auto-finance-calc-thumbnail.png">
             </div>
           </div>
 
-          <div class="sm:col-span-2 md:col-span-3">
+          <div class="col-span-2 md:col-span-3">
             <div class="project-preview-text">
               <p class="project-preview-title">
                 <strong>Auto Finance Calculator</strong>
@@ -235,6 +242,8 @@
           </div>
         </div>
         </a>
+
+        <div class="project-preview-arrow">&#10174;</div>
       </div>
     
   
@@ -242,13 +251,13 @@
       <div class="project-preview-container border-thin-selectable">
         <a href="https://tumblefox.github.io/Dialogue-to-JSON/" target="_blank">
         <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="sm:col-span-2 md:col-span-1">
+          <div class="col-span-2 md:col-span-1">
             <div>
               <img class="thumbnail" alt="Dialogue to JSON" src="static/images/gallery/dialogue-to-json-thumbnail.png">
             </div>
           </div>
 
-          <div class="sm:col-span-2 md:col-span-3">
+          <div class="col-span-2 md:col-span-3">
             <div class="project-preview-text">
               <p class="project-preview-title">
                 <strong>Dialogue to JSON</strong>
@@ -261,11 +270,12 @@
           </div>
         </div>
         </a>
+
+        <div class="project-preview-arrow">&#10174;</div>
       </div>
     
   
 </div>
-
 
             </section>
           

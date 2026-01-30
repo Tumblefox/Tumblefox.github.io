@@ -1,33 +1,47 @@
+import { animate, stagger, createTimeline } from 'animejs';
+
 (() => {
   window.addEventListener("load", () => {
-    let animationTimeline = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 1000
-    });
+    const timeline = createTimeline();
 
     let animations = [
       {
         targets: ".intro-card h1",
-        fontSize: "6em"
+        properties: {
+          scale: [
+            { to: '1.14', ease: 'outExpo', duration: 600 },
+            { to: '1', ease: 'outBounce', duration: 800, delay: 100 }
+          ],
+          "text-shadow": "3px 3px 0 #fff"
+        }
       },
       {
-        targets: ".intro-card h1 span",
-        // color: "#000000",
-        boxShadow: "7px 7px 0 white"
+        targets: "#top-skills span",
+        properties: {
+          scale: [
+            { to: '1.14', ease: 'outExpo', duration: 600 },
+            { to: '1', ease: 'outBounce', duration: 800, delay: 100 }
+          ],
+          '--c1': [
+            { to: '#7a5c1e', ease: 'outExpo', duration: 600 },
+            { to: '#60696D', ease: 'outExpo', duration: 800, delay: 100 }
+          ],
+          '--c2': [
+            { to: '#f5e6a8', ease: 'outExpo', duration: 600 },
+            { to: '#D3D2D5', ease: 'outExpo', duration: 800, delay: 100 }
+          ],
+          '--c3': [
+            { to: '#c9a23f', ease: 'outExpo', duration: 600 },
+            { to: '#7C7F85', ease: 'outExpo', duration: 800, delay: 100 }
+          ],
+          delay: stagger(100),
+          ease: 'inOutCirc'
+        }
       },
-      {
-        targets: ".intro-card p",
-        keyframes: [
-          {rotate: 10, scale: 0.5},
-          {rotate: -10},
-          {rotate: 0, scale: 1}
-        ],
-        duration: 1000
-      }
     ];
 
-    // animations.forEach((animation) => {
-    //   animationTimeline.add(animation);
-    // });
+    animations.forEach((animation) => {
+      timeline.add(animation.targets, animation.properties);
+    });
   });
 })();
