@@ -6,19 +6,20 @@
 }
 
 @font-face {
-  font-family: Anklepants;
-  src: url(/static/fonts/anklepants.regular.otf);
-}
-
-@font-face {
-  font-family: Audiowide;
-  src: url(/static/fonts/audiowide.regular.ttf);
+  font-family: Linear-Beam;
+  src: url(/static/fonts/linear-beam.0-5.ttf);
 }
 
 :root {
   --steel-color: linear-gradient(to left, #60696D, #D3D2D5, #7C7F85, #60696D, #D3D2D5);
+  --alt-steel-color: linear-gradient(#D3D2D5 10px, #60696D 15px, #7C7F85 2px);
   --gold-color: linear-gradient(to left, #7a5c1e, #f5e6a8, #c9a23f, #7a5c1e, #f5e6a8);
-  --highlight-color: #2ecc71;
+  --gray: #cccccc;
+  --sage: #4d5d53;
+  --green: #435154;
+  --pottery: #935c55;
+  --highlight-color: var(--sage);
+  --bold-color: var(--green);
 }
 
 body, html {
@@ -31,7 +32,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Anklepants;
+  font-family: sans-serif;
   color: #121212;
 }
 
@@ -40,7 +41,7 @@ nav {
   border-color: #000000;
   border-width: 2px;
   display: flex;
-  background: var(--steel-color);
+  background: var(--gray);
   /*clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 45% 70%, 0% 70%);*/
 }
 nav ul {
@@ -83,37 +84,40 @@ img {
 
 .steel-button {
   padding: 10px;
-  background: linear-gradient(#D3D2D5 10px, #60696D 15px, #7C7F85 2px);
-  border-style: none none solid solid;
-  border-color: #000000;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #050709;
   border-width: 1px;
   transition: 0.3s;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%);
+  /* clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%); */
   width: 200px;
-  /*width: 350px;*/
   color: #050709;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: -1px 1px 2px #ffffff;
   font-family: Audiowide, sans-serif;
   font-size: 1em;
 }
 .steel-button:hover {
+  border-color: var(--gray);
   color: #ffffff;
-  text-shadow: -1px 1px 1px #000000;
+  background: var(--highlight-color);
 }
-.steel-button:active {
-  color: var(--highlight-color);
-  text-shadow: none;
-  border-color: var(--highlight-color);
-}
+.steel-button:active {}
+
+  @keyframes intro-card-background {
+    0%   {background-position: 0px 0px}
+    50% {background-position: 50px 50px}
+    100% {background-position: 0px 0px}
+  }
 
 .intro-card {
-  /*background-repeat: repeat;
-  background-image: url("/static/images/background-pattern-1.png");
-  background-size: 50px;
-  background-color: #11121c;*/
-  background: var(--steel-color);
+  background: var(--gray);
+  background-image: radial-gradient(circle, #A8A8A8 1px, var(--gray) 0px);
+  background-size: 20px 20px;
+  animation-name: intro-card-background;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   padding: 1rem;
   border-style: none none solid none;
   border-color: #000000;
@@ -122,16 +126,16 @@ img {
 .intro-card h1 {
   font-size: 5rem;
   margin-top: 0;
-  text-shadow: 2px 2px 2px #474747;
-  font-family: Anklepants, sans-serif;
+  font-family: Linear-Beam, sans-serif;
+  color: var(--sage);
 }
 .intro-card h1 span {
   white-space: nowrap;
 }
 .intro-card p {
   font-size: 1.3rem;
-  margin-bottom: 0;
-  font-family: Audiowide, sans-serif;
+  margin-bottom: 1rem;
+  font-family: sans-serif;
 }
 .intro-card p span {
 }
@@ -142,21 +146,19 @@ img {
 
 .project-preview-container {
   margin-bottom: 10px;
-  border-width: 1px;
-  border-radius: 0 10px 10px 0;
+  border-color: #000;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
 
 .project-preview {
-  border-image: var(--steel-color) 30;
-  border-width: 5px 10px;
-  background-color: #1c1919;
-  color: #ffffff;
+  border-radius: 10px;
 }
 
 .project-preview-title {
   font-family: Raleway, sans-serif;
+  text-align: center;
 }
 
 .project-preview-text {
@@ -182,10 +184,10 @@ img {
   border-width: thin;
 }
 .emphasis-paragraph b {
-  color: var(--highlight-color);
+  color: var(--bold-color);
 }
 .emphasis-paragraph p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .section-header span {
@@ -248,11 +250,10 @@ img {
 }
 
 .thumbnail {
-  width: 200px; 
+  width: 200px;
 }
 
 .skill-tag {
-  background: var(--steel-color);
   color: #000000;
   font-weight: bold;
   text-shadow: -1px 1px 2px #ffffff;
@@ -266,15 +267,6 @@ img {
   --c1: #60696D;
   --c2: #D3D2D5;
   --c3: #7C7F85;
-
-  background: linear-gradient(
-    to left,
-    var(--c1),
-    var(--c2),
-    var(--c3),
-    var(--c1),
-    var(--c2)
-  );
 }
 
 .social-icon {
