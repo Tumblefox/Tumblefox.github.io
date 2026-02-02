@@ -1,11 +1,19 @@
 {%
   set links = [
     {
+      title: "About",
+      href: "#about"
+    },
+    {
       title: "Projects",
       href: "#projects"
     },
     {
-      title: "LinkedIn", 
+      title: "Gallery",
+      href: "#gallery"
+    },
+    {
+      title: "LinkedIn",
       href: "https://www.linkedin.com/in/a-jee-sieka-9b0400163/",
       target: "_blank"
     }
@@ -13,9 +21,17 @@
 %}
 
 <nav>
-  <ul>
+  <input type="checkbox" id="nav-menu-toggle" />
+
+  <label id="nav-menu-toggle-icon" for="nav-menu-toggle">
+    <span>&mdash;</span>
+    <span>&mdash;</span>
+    <span>&mdash;</span>
+  </label>
+
+  <ul class="nav-menu">
     {% for link in links %}
-      <li>
+      <li class="nav-menu-item">
         <a href="{{ link.href }}" target="{{ link.target if link.target else "_self" }}">
           {{ link.title }}
         </a>

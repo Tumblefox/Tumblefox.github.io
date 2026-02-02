@@ -119,100 +119,111 @@
 
     <div id="call-to-action">
       <a href="mailto:ajee.sieka@gmail.com">
-        <button class="steel-button">Contact Me</button>
+        <button class="main-button">Contact Me</button>
       </a>
     </div>
   </section>
 
   <article>
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
-      <section id="about">
-        <div class="emphasis-paragraph container">
+    <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4">
+      <section id="about" class="container mb-2 mx-auto">
+        <div class="emphasis-paragraph">
+          <div class="emphasis-paragraph-toolbar">
+            <h4>
+              <span>About</span>
+            </h4>
+          </div>
+
+          <div class="emphasis-paragraph-content">
+            <p>
+              I'm a <b>full-stack web developer</b> with 8 years of experience building reliable, user-focused web applications.
+            </p>
+
+            <p>
+              I've worked across <b>frontend and backend systems</b>, with a focus on <b>clarity</b>, <b>performance</b>, and <b>maintainability</b>. I enjoy turning complex requirements into straightforward, usable tools, especially internal applications, content-driven sites, and workflow-heavy interfaces.
+            </p>
+
+            <p>
+              My background spans modern frontend development and server-side work, including <b>templating</b>, <b>APIs</b>, <b>data modeling</b>, and <b>integration</b> with third-party services. I value pragmatic technology choices, clear tradeoffs, and writing code that's easy to understand and maintain over time.
+            </p>
+
+            <p>
+              I'm <b>framework-agnostic</b> and comfortable ramping into new stacks quickly, with experience in Astro, Nunjucks, JavaScript, Node.js, SQL, and related web technologies.
+            </p>
+
+            {% for category, values in categories %}
+              {% if selectedCategory == category %}
+                <div class="mb-2">
+                  <div class="subsection-header">
+                    <h5><span>Skills</span></h5>
+                  </div>
+
+                  {#
+                  <p>{{ values.description }}</p>
+                  #}
+
+                  <p>
+                    {% for skill in values.skills %}
+                      <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                  </p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="emphasis-paragraph-footer">
+            <p>
+              For more information, visit my
+              <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" target="_blank"><strong>LinkedIn page</strong></a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="container mb-2 mx-auto">
+        <div>
+          <div class="section-header">
+            <h4>
+              <span>Projects</span>
+            </h4>
+          </div>
+
+          {% for category, projects in projects | groupby('category') %}
+            {% if selectedCategory == category %}
+              <section>
+                {{ project.preview(projects) }}
+              </section>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="gallery" class="container mx-auto">
         <h4 class="section-header">
-          <span>About</span>
+          <span>Gallery</span>
         </h4>
 
-        <p>
-          I'm a <b>full-stack web developer</b> with 8 years of experience building reliable, user-focused web applications.
-        </p>
-
-        <p>
-          I've worked across <b>frontend and backend systems</b>, with a focus on <b>clarity</b>, <b>performance</b>, and <b>maintainability</b>. I enjoy turning complex requirements into straightforward, usable tools, especially internal applications, content-driven sites, and workflow-heavy interfaces.
-        </p>
-
-        <p>
-          My background spans modern frontend development and server-side work, including <b>templating</b>, <b>APIs</b>, <b>data modeling</b>, and <b>integration</b> with third-party services. I value pragmatic technology choices, clear tradeoffs, and writing code that's easy to understand and maintain over time.
-        </p>
-
-        <p>
-          I'm <b>framework-agnostic</b> and comfortable ramping into new stacks quickly, with experience in Astro, Nunjucks, JavaScript, Node.js, SQL, and related web technologies.
-        </p>
-
-        {% for category, values in categories %}
-          {% if selectedCategory == category %}
-            <div class="mb-2">
-              <div class="subsection-header">
-                <h5><span>Skills</span></h5>
-              </div>
-
-              {#
-              <p>{{ values.description }}</p>
-              #}
-
-              <p>
-                {% for skill in values.skills %}
-                  <span class="skill-tag">{{ skill }}</span>
-                {% endfor %}
-              </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {% for gallery in galleries %}
+            <div class="gallery-thumbnail border-medium-selectable">
+              <a href="static/images/gallery/{{ gallery.image }}" target="_blank">
+                <div class="gallery-thumbnail-toolbar">
+                  <button>
+                    <img src="/static/images/maximize-icon.png" />
+                  </button>
+                </div>
+                <img
+                  class=""
+                  alt="{{ gallery.title }}"
+                  src="static/images/gallery/{{ gallery.thumbnail }}"
+                />
+              </a>
             </div>
-          {% endif %}
-        {% endfor %}
-
-        <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" class="link" target="_blank">
-          <img class="social-icon" alt="LinkedIn" src="/static/images/linkedin.png">
-        </a>
+          {% endfor %}
         </div>
-      </section>
-
-      <section id="projects">
-        <div class="section-header">
-          <h4>
-            <span>Projects</span>
-          </h4>
-        </div>
-
-        {% for category, projects in projects | groupby('category') %}
-          {% if selectedCategory == category %}
-            <section class="container">
-              {{ project.preview(projects) }}
-            </section>
-          {% endif %}
-        {% endfor %}
       </section>
     </div>
-
-    {#
-    <section id="gallery" class="container">
-      <h4 class="section-header">
-        <span>Gallery</span>
-      </h4>
-
-      <div class="grid grid-cols-4 gap-4">
-        {% for gallery in galleries %}
-          <div>
-            <a href="static/images/gallery/{{ gallery.image }}" target="_blank">
-              <img
-                class="gallery-link border-thin-selectable"
-                alt="{{ gallery.title }}"
-                src="static/images/gallery/{{ gallery.thumbnail }}"
-              />
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-    #}
-
   </article>
 {% endblock %}
 

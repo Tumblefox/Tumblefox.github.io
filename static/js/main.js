@@ -2889,7 +2889,7 @@
               { to: "1", ease: "outBounce", duration: 800, delay: 100 }
             ],
             color: [
-              { to: "var(--pottery)", ease: "outExpo", duration: 600 },
+              { to: "var(--sage)", ease: "outExpo", duration: 600 },
               { to: "#000", ease: "outExpo", duration: 800, delay: 100 }
             ],
             delay: stagger(100),

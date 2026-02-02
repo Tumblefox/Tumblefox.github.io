@@ -16,15 +16,35 @@
       
 
 <nav>
-  <ul>
+  <input type="checkbox" id="nav-menu-toggle" />
+
+  <label id="nav-menu-toggle-icon" for="nav-menu-toggle">
+    <span>&mdash;</span>
+    <span>&mdash;</span>
+    <span>&mdash;</span>
+  </label>
+
+  <ul class="nav-menu">
     
-      <li>
+      <li class="nav-menu-item">
+        <a href="#about" target="_self">
+          About
+        </a>
+      </li>
+    
+      <li class="nav-menu-item">
         <a href="#projects" target="_self">
           Projects
         </a>
       </li>
     
-      <li>
+      <li class="nav-menu-item">
+        <a href="#gallery" target="_self">
+          Gallery
+        </a>
+      </li>
+    
+      <li class="nav-menu-item">
         <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" target="_blank">
           LinkedIn
         </a>
@@ -75,119 +95,127 @@
 
     <div id="call-to-action">
       <a href="mailto:ajee.sieka@gmail.com">
-        <button class="steel-button">Contact Me</button>
+        <button class="main-button">Contact Me</button>
       </a>
     </div>
   </section>
 
   <article>
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
-      <section id="about">
-        <div class="emphasis-paragraph container">
-        <h4 class="section-header">
-          <span>About</span>
-        </h4>
+    <div class="grid sm:grid-cols-1 md:grid-cols-1 gap-4">
+      <section id="about" class="container mb-2 mx-auto">
+        <div class="emphasis-paragraph">
+          <div class="emphasis-paragraph-toolbar">
+            <h4>
+              <span>About</span>
+            </h4>
+          </div>
 
-        <p>
-          I'm a <b>full-stack web developer</b> with 8 years of experience building reliable, user-focused web applications.
-        </p>
+          <div class="emphasis-paragraph-content">
+            <p>
+              I'm a <b>full-stack web developer</b> with 8 years of experience building reliable, user-focused web applications.
+            </p>
 
-        <p>
-          I've worked across <b>frontend and backend systems</b>, with a focus on <b>clarity</b>, <b>performance</b>, and <b>maintainability</b>. I enjoy turning complex requirements into straightforward, usable tools, especially internal applications, content-driven sites, and workflow-heavy interfaces.
-        </p>
+            <p>
+              I've worked across <b>frontend and backend systems</b>, with a focus on <b>clarity</b>, <b>performance</b>, and <b>maintainability</b>. I enjoy turning complex requirements into straightforward, usable tools, especially internal applications, content-driven sites, and workflow-heavy interfaces.
+            </p>
 
-        <p>
-          My background spans modern frontend development and server-side work, including <b>templating</b>, <b>APIs</b>, <b>data modeling</b>, and <b>integration</b> with third-party services. I value pragmatic technology choices, clear tradeoffs, and writing code that's easy to understand and maintain over time.
-        </p>
+            <p>
+              My background spans modern frontend development and server-side work, including <b>templating</b>, <b>APIs</b>, <b>data modeling</b>, and <b>integration</b> with third-party services. I value pragmatic technology choices, clear tradeoffs, and writing code that's easy to understand and maintain over time.
+            </p>
 
-        <p>
-          I'm <b>framework-agnostic</b> and comfortable ramping into new stacks quickly, with experience in Astro, Nunjucks, JavaScript, Node.js, SQL, and related web technologies.
-        </p>
+            <p>
+              I'm <b>framework-agnostic</b> and comfortable ramping into new stacks quickly, with experience in Astro, Nunjucks, JavaScript, Node.js, SQL, and related web technologies.
+            </p>
 
-        
-          
-            <div class="mb-2">
-              <div class="subsection-header">
-                <h5><span>Skills</span></h5>
-              </div>
-
+            
               
+                <div class="mb-2">
+                  <div class="subsection-header">
+                    <h5><span>Skills</span></h5>
+                  </div>
 
-              <p>
-                
-                  <span class="skill-tag">Astro</span>
-                
-                  <span class="skill-tag">Nunjucks</span>
-                
-                  <span class="skill-tag">JavaScript</span>
-                
-                  <span class="skill-tag">Node.js</span>
-                
-                  <span class="skill-tag">SQL</span>
-                
-                  <span class="skill-tag">HTML</span>
-                
-                  <span class="skill-tag">CSS</span>
-                
-                  <span class="skill-tag">Tailwind</span>
-                
-                  <span class="skill-tag">Eleventy</span>
-                
-                  <span class="skill-tag">AWS</span>
-                
-                  <span class="skill-tag">Python</span>
-                
-              </p>
-            </div>
-          
-        
-          
-        
+                  
 
-        <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" class="link" target="_blank">
-          <img class="social-icon" alt="LinkedIn" src="/static/images/linkedin.png">
-        </a>
+                  <p>
+                    
+                      <span class="skill-tag">Astro</span>
+                    
+                      <span class="skill-tag">Nunjucks</span>
+                    
+                      <span class="skill-tag">JavaScript</span>
+                    
+                      <span class="skill-tag">Node.js</span>
+                    
+                      <span class="skill-tag">SQL</span>
+                    
+                      <span class="skill-tag">HTML</span>
+                    
+                      <span class="skill-tag">CSS</span>
+                    
+                      <span class="skill-tag">Tailwind</span>
+                    
+                      <span class="skill-tag">Eleventy</span>
+                    
+                      <span class="skill-tag">AWS</span>
+                    
+                      <span class="skill-tag">Python</span>
+                    
+                  </p>
+                </div>
+              
+            
+              
+            
+          </div>
+
+          <div class="emphasis-paragraph-footer">
+            <p>
+              For more information, visit my
+              <a href="https://www.linkedin.com/in/a-jee-sieka-9b0400163/" target="_blank"><strong>LinkedIn page</strong></a>.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="projects">
-        <div class="section-header">
-          <h4>
-            <span>Projects</span>
-          </h4>
-        </div>
+      <section id="projects" class="container mb-2 mx-auto">
+        <div>
+          <div class="section-header">
+            <h4>
+              <span>Projects</span>
+            </h4>
+          </div>
 
-        
           
-            <section class="container">
-              
-<div>
+            
+              <section>
+                
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
   
     
-      <div class="project-preview-container border-thin-selectable">
+      <div class="project-preview-container border-medium-selectable">
         <a href="https://tumblefox.github.io/PDF-Form-Filler/" target="_blank">
-        <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="col-span-2 md:col-span-1">
-            <div>
-              <img class="thumbnail" alt="PDF Form Filler" src="static/images/gallery/pdf-form-filler-thumbnail.png">
-            </div>
+          <div class="project-preview-toolbar">
+            <p>
+              <strong>PDF Form Filler</strong>
+            </p>
           </div>
 
-          <div class="col-span-2 md:col-span-3">
-            <div class="project-preview-text">
-              <p class="project-preview-title">
-                <strong>PDF Form Filler</strong>
-              </p>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 project-preview">
+            <div class="col-span-1 sm:col-span-2 xl:col-span-1">
+              <div>
+                <img class="thumbnail project-preview-thumbnail mx-auto sm:mx-0" alt="PDF Form Filler" src="static/images/gallery/pdf-form-filler-thumbnail.png">
+              </div>
+            </div>
 
-              <p class="project-preview-description">
-                Upload a PDF, add text and signatures directly in the browser, and save the updated document—no server required.
-              </p>
+            <div class="col-span-1 sm:col-span-2 xl:col-span-3">
+              <div class="project-preview-text">
+                <p class="project-preview-description">
+                  Upload a PDF, add text and signatures directly in the browser, and save the updated document—no server required.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </a>
-
-        <div class="project-preview-arrow">&#10230;</div>
       </div>
     
   
@@ -196,73 +224,141 @@
     
   
     
-      <div class="project-preview-container border-thin-selectable">
+      <div class="project-preview-container border-medium-selectable">
         <a href="https://tumblefox.github.io/Auto-Finance-Calculator/" target="_blank">
-        <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="col-span-2 md:col-span-1">
-            <div>
-              <img class="thumbnail" alt="Auto Finance Calculator" src="static/images/gallery/auto-finance-calc-thumbnail.png">
-            </div>
+          <div class="project-preview-toolbar">
+            <p>
+              <strong>Auto Finance Calculator</strong>
+            </p>
           </div>
 
-          <div class="col-span-2 md:col-span-3">
-            <div class="project-preview-text">
-              <p class="project-preview-title">
-                <strong>Auto Finance Calculator</strong>
-              </p>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 project-preview">
+            <div class="col-span-1 sm:col-span-2 xl:col-span-1">
+              <div>
+                <img class="thumbnail project-preview-thumbnail mx-auto sm:mx-0" alt="Auto Finance Calculator" src="static/images/gallery/auto-finance-calc-thumbnail.png">
+              </div>
+            </div>
 
-              <p class="project-preview-description">
-                Calculate a vehicle&#39;s total cost of ownership—factoring in maintenance, insurance, fuel, financing, and more over any time horizon.
-              </p>
+            <div class="col-span-1 sm:col-span-2 xl:col-span-3">
+              <div class="project-preview-text">
+                <p class="project-preview-description">
+                  Calculate a vehicle&#39;s total cost of ownership—factoring in maintenance, insurance, fuel, financing, and more over any time horizon.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </a>
-
-        <div class="project-preview-arrow">&#10230;</div>
       </div>
     
   
     
-      <div class="project-preview-container border-thin-selectable">
+      <div class="project-preview-container border-medium-selectable">
         <a href="https://tumblefox.github.io/Dialogue-to-JSON/" target="_blank">
-        <div class="grid grid-cols-4 gap-4 project-preview">
-          <div class="col-span-2 md:col-span-1">
-            <div>
-              <img class="thumbnail" alt="Dialogue to JSON" src="static/images/gallery/dialogue-to-json-thumbnail.png">
-            </div>
+          <div class="project-preview-toolbar">
+            <p>
+              <strong>Dialogue to JSON</strong>
+            </p>
           </div>
 
-          <div class="col-span-2 md:col-span-3">
-            <div class="project-preview-text">
-              <p class="project-preview-title">
-                <strong>Dialogue to JSON</strong>
-              </p>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 project-preview">
+            <div class="col-span-1 sm:col-span-2 xl:col-span-1">
+              <div>
+                <img class="thumbnail project-preview-thumbnail mx-auto sm:mx-0" alt="Dialogue to JSON" src="static/images/gallery/dialogue-to-json-thumbnail.png">
+              </div>
+            </div>
 
-              <p class="project-preview-description">
-                Write play-style dialogue in a clean, chat-bubble interface that saves everything as structured JSON.
-              </p>
+            <div class="col-span-1 sm:col-span-2 xl:col-span-3">
+              <div class="project-preview-text">
+                <p class="project-preview-description">
+                  Write play-style dialogue in a clean, chat-bubble interface that saves everything as structured JSON.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </a>
-
-        <div class="project-preview-arrow">&#10230;</div>
       </div>
     
   
 </div>
 
-            </section>
+              </section>
+            
           
-        
+            
           
-        
+        </div>
+      </section>
+
+      <section id="gallery" class="container mx-auto">
+        <h4 class="section-header">
+          <span>Gallery</span>
+        </h4>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+            <div class="gallery-thumbnail border-medium-selectable">
+              <a href="static/images/gallery/portfolio.png" target="_blank">
+                <div class="gallery-thumbnail-toolbar">
+                  <button>
+                    <img src="/static/images/maximize-icon.png" />
+                  </button>
+                </div>
+                <img
+                  class=""
+                  alt="Portfolio Mockup"
+                  src="static/images/gallery/portfolio-thumbnail.png"
+                />
+              </a>
+            </div>
+          
+            <div class="gallery-thumbnail border-medium-selectable">
+              <a href="static/images/gallery/sieka-autos-1.png" target="_blank">
+                <div class="gallery-thumbnail-toolbar">
+                  <button>
+                    <img src="/static/images/maximize-icon.png" />
+                  </button>
+                </div>
+                <img
+                  class=""
+                  alt="Auto Website Mockup"
+                  src="static/images/gallery/sieka-autos-thumbnail.png"
+                />
+              </a>
+            </div>
+          
+            <div class="gallery-thumbnail border-medium-selectable">
+              <a href="static/images/gallery/non-profit-mockup.png" target="_blank">
+                <div class="gallery-thumbnail-toolbar">
+                  <button>
+                    <img src="/static/images/maximize-icon.png" />
+                  </button>
+                </div>
+                <img
+                  class=""
+                  alt="Non-Profit Foundation Mockup"
+                  src="static/images/gallery/non-profit-thumbnail.png"
+                />
+              </a>
+            </div>
+          
+            <div class="gallery-thumbnail border-medium-selectable">
+              <a href="static/images/gallery/kcc.png" target="_blank">
+                <div class="gallery-thumbnail-toolbar">
+                  <button>
+                    <img src="/static/images/maximize-icon.png" />
+                  </button>
+                </div>
+                <img
+                  class=""
+                  alt="KCC Mockup"
+                  src="static/images/gallery/kcc-thumbnail.png"
+                />
+              </a>
+            </div>
+          
+        </div>
       </section>
     </div>
-
-    
-
   </article>
 
   	</main>
