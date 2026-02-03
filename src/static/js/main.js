@@ -1,7 +1,21 @@
 import { animate, stagger, createTimeline } from 'animejs';
 
 (() => {
+  const startClock = () => {
+    const clock = document.querySelector("#toolbar-clock");
+    setInterval(() => {
+      const date = new Date();
+      const hour = date.getHours();
+      const minute = date.getMinutes();
+      const period = (Number(hour) < 12) ? "AM" : "PM";
+      const clockString = `${hour}:${minute}${period}`;
+      clock.innerText = clockString;
+    }, 1000);
+  };
+
   window.addEventListener("load", () => {
+    startClock();
+
     const timeline = createTimeline();
 
     let animations = [

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Raleway;
+  src: url(/static/fonts/raleway.regular.ttf);
+}
+
+@font-face {
+  font-family: Linear-Beam;
+  src: url(/static/fonts/linear-beam.0-5.ttf);
+}
+
+@font-face {
+  font-family: VT323;
+  src: url(/static/fonts/vt323.regular.ttf);
+}

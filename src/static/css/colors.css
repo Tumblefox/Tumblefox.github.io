@@ -1,0 +1,17 @@
+:root {
+  --steel-color: linear-gradient(to left, #60696D, #D3D2D5, #7C7F85, #60696D, #D3D2D5);
+  --alt-steel-color: linear-gradient(#D3D2D5 10px, #60696D 15px, #7C7F85 2px);
+  --gold-color: linear-gradient(to left, #7a5c1e, #f5e6a8, #c9a23f, #7a5c1e, #f5e6a8);
+  --gray: #cccccc;
+  --sage: #4d5d53;
+  --green: #435154;
+  --pottery: #935c55;
+  --wheat: #f5deb3;
+  --teal: #4a6f6a;
+  --win-95-teal: #008282;
+  --black: #121212;
+
+  --highlight-color: var(--sage);
+  --bold-color: var(--green);
+  --body-color: var(--teal);
+}

@@ -1,0 +1,39 @@
+.project-preview-container {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-style: groove;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  border-width: 2px;
+  background-color: var(--gray);
+  padding: 5px;
+}
+
+.project-preview-toolbar {
+  background: var(--sage);
+  display: flex;
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+.project-preview-toolbar p {
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  color: var(--wheat);
+}
+.project-preview-toolbar p::after {
+  content: '↗'
+}
+
+.project-preview-text {
+  padding: 10px 0;
+  font-weight: bold;
+}
+.project-preview-text::after {
+  content: "Click to View."
+
+}
+
+.project-preview-thumbnail {
+  border-style: groove;
+  border-color: #000000 #ffffff #ffffff #000000;
+  border-width: 2px;
+}

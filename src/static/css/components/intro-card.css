@@ -1,0 +1,45 @@
+@keyframes intro-card-background {
+  0%   {background-position: 0px 0px}
+  50% {background-position: 50px 50px}
+  100% {background-position: 0px 0px}
+}
+
+.intro-card {
+background: var(--gray);
+/* background-image: radial-gradient(circle, #A8A8A8 1px, var(--gray) 0px);
+background-size: 20px 20px;
+animation-name: intro-card-background;
+animation-duration: 60s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out; */
+background-image: url(/static/images/sky-1256943_1920.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+padding: 1rem;
+border-style: none none solid none;
+border-color: #000000;
+border-width: 2px;
+}
+.intro-card h1 {
+font-size: 5rem;
+margin-top: 0;
+font-family: Linear-Beam, sans-serif;
+color: var(--sage);
+}
+.intro-card h1 span {
+white-space: nowrap;
+}
+.intro-card p {
+font-size: 1.3rem;
+margin-bottom: 1rem;
+font-family: sans-serif;
+}
+.intro-card p span {
+}
+
+@media (max-width:600px) {
+  .intro-card h1 {
+    font-size: 3rem !important;
+    margin-top: 0;
+  }
+}

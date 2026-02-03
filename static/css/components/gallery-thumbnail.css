@@ -1,0 +1,24 @@
+.gallery-thumbnail {
+  border-style: groove;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  border-width: 2px;
+  background-color: var(--gray);
+  padding: 5px;
+}
+
+.gallery-thumbnail-toolbar {
+  background: var(--sage);
+  display: flex;
+  padding: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.gallery-thumbnail-toolbar button {
+  background: var(--gray);
+  width: 16px;
+  border-style: groove;
+  border-color: #ffffff #000000 #000000 #ffffff;
+  border-width: 1px;
+  cursor: pointer;
+}
